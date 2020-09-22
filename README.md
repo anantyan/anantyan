@@ -1,5 +1,3 @@
-### Hi there 👋
-
 <!--
 **anantyan/anantyan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -16,8 +14,8 @@ Here are some ideas to get you started:
 -->
 
 <div align="center">
-  <h2> Hi, I am Code Architects 💻 </h2>
-  <p><a href="https://www.instargram.com/code.archiects">@code.architects</a></p>
+  <h2> Hi, I am Arya Rezza Anantya 💻 </h2>
+  <p><a href="https://www.linkedin.com/in/anantyan/">Anantyan</a></p>
 </div>
 
 ### Bio 👨‍🦱
@@ -34,8 +32,11 @@ Informasi & Tips dengan kecantikan portfolio. 🌈
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/?username=anantyan&show_icons=true" alt="git stats">
 </div>
-
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=anantyan)
+<div align="center">
+  ![](https://github-readme-stats.vercel.app/api/top-langs/?username=anantyan)
+</div>
 
 ### Links ⚡
-<a href="https://www.instagram.com/anantyan"> Instagram </a> | <a href="https://www.linkedin.com/in/anantyan/"> Linkedin </a>
+<div align="center">
+  <a href="https://www.instagram.com/anantyan"> Instagram </a> | <a href="https://www.linkedin.com/in/anantyan/"> Linkedin </a>
+</div>
