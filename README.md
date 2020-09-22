@@ -32,9 +32,7 @@ Informasi & Tips dengan kecantikan portfolio. 🌈
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/?username=anantyan&show_icons=true" alt="git stats">
 </div>
-<div align="center">
-  ![](https://github-readme-stats.vercel.app/api/top-langs/?username=anantyan)
-</div>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=anantyan)
 
 ### Links ⚡
 <div align="center">
