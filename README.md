@@ -14,3 +14,28 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+<div align="center">
+  <h2> Hi, I am Code Architects 💻 </h2>
+  <p><a href="https://www.instargram.com/code.archiects">@code.architects</a></p>
+</div>
+
+### Bio 👨‍🦱
+
+```
+Instagram hanya untuk bersernang-senang selebihnya ada di Linkedin 💻 
+Informasi & Tips dengan kecantikan portfolio. 🌈
+💻 | Coding Architecture
+📚 | Belajar style coding yang benar
+💬 | Email saya jika membutuhkan
+```
+
+### Github Stats 💯
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/?username=anantyan&show_icons=true" alt="git stats">
+</div>
+
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=anantyan)
+
+### Links ⚡
+<a href="https://www.instagram.com/anantyan"> Instagram </a> | <a href="https://www.linkedin.com/in/anantyan/"> Linkedin </a>
