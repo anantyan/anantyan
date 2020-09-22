@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 
 <div align="center">
   <h2> Hi, I am Arya Rezza Anantya 💻 </h2>
-  <p><a href="https://www.linkedin.com/in/anantyan/">Anantyan</a></p>
+  <p><a href="https://www.linkedin.com/in/anantyan/">in anantyan</a></p>
 </div>
 
 ### Bio 👨‍🦱
@@ -32,8 +32,11 @@ Informasi & Tips dengan kecantikan portfolio. 🌈
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/?username=anantyan&show_icons=true" alt="git stats">
 </div>
+<div align="center">
 
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=anantyan)
+
+</div>
 
 ### Links ⚡
 <div align="center">
