@@ -39,6 +39,6 @@ Informasi & Tips dengan kecantikan portfolio. 🌈
 ### Links ⚡
 <div align="center">
   <a href="https://www.instagram.com/anantyan"> Instagram </a> | <a href="https://www.linkedin.com/in/anantyan/"> Linkedin </a>
-  <br />
+  <!-- <br /> -->
   <!-- <img src="https://komarev.com/ghpvc/?username=anantyan" alt="Anantyan" /> -->
 </div>
