@@ -14,7 +14,7 @@ Here are some ideas to get you started:
 -->
 
 <div align="center">
-  <h2> Hi, I am Arya Rezza Anantya 💻 </h2>
+  <h2> Hi, I am Arya Rezza 💻 </h2>
   <p><a href="https://www.linkedin.com/in/anantyan/">in anantyan</a></p>
 </div>
 
