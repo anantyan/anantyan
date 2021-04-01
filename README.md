@@ -31,6 +31,7 @@ Informasi & Tips dengan kecantikan portfolio. 🌈
 ### Github Stats 💯
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/?username=anantyan&show_icons=true" alt="Git Stats">
+  
   ![](https://github-readme-stats.vercel.app/api/top-langs/?username=anantyan&layout=compact&count_private=true&hide=html,css,php&langs_count=8)
 </div>
 
