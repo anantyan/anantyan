@@ -25,6 +25,4 @@ Informasi & Tips dengan kecantikan portfolio Github 👨‍💻
 ```
 
 ### Links ⚡
-- 📷 | <a href="https://www.instagram.com/anantyan"> Instagram </a>
-- 🔗 | <a href="https://www.linkedin.com/in/anantyan"> Linkedin </a>
 - 🐦 | <a href="https://www.twitter.com/anantyan_twt"> Twitter </a>
