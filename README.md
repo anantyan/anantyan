@@ -14,7 +14,10 @@ Here are some ideas to get you started:
 -->
 
 Here are some ideas to get you started:
+
 - 🔭 | Currently working on Freelancer but more self-expression and unemployed
 - 🌱 | Currently learning on Student Collage Informatics Engineering
 - 💻 | Application program component architecture
 - 📚 | Still in learning stay foolish
+
+```Pernah belajar 📚 Web Development & Framework Mobile 👨‍💻 tetapi tidak aku lanjutkan karena akan lebih aku fokuskan ke mobile native seperti android dan dalam waktu dekat ke swift iOS 📲 atau jika berubah pikiran mungkin lebih AI Mobile```
