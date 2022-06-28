@@ -20,4 +20,4 @@ Here are some ideas to get you started:
 - 💻 | Application program component architecture
 - 📚 | Still learning
 
-```Pernah belajar 📚 Web Development & Framework Mobile 👨‍💻 tetapi tidak aku lanjutkan karena akan lebih aku fokuskan ke mobile native seperti android dan dalam waktu dekat ke swift iOS 📲 atau jika berubah pikiran mungkin lebih AI Mobile 🤖```
+```Pernah belajar 📚 Web Development & Framework Mobile 👨‍💻 tetapi tidak dlanjutkan karena akan lebih fokuskan ke mobile native seperti android dan dalam waktu dekat ke swift iOS 📲 atau jika berubah pikiran mungkin lebih AI Mobile 🤖```
