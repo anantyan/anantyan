@@ -20,4 +20,4 @@ Here are some ideas to get you started:
 - 💻 | Application program component architecture
 - 📚 | Still learning
 
-```Pernah belajar 📚 Web Development & Framework Mobile 👨‍💻 tetapi tidak dlanjutkan karena akan lebih fokuskan ke mobile native seperti android dan dalam waktu dekat ke swift iOS 📲 atau jika berubah pikiran mungkin lebih AI Mobile 🤖```
+```Pengalaman kerja 1 tahun menjadi Frontend Web Developer untuk perusahaan sekala kecil • Freelance project 2 tahun • Sebagai Mahasiswa di kampus Universitas AMIKOM Purwokerto & Indenpendent Study di Binar Academy bagian dari Android Developer • Pengalaman internship di Citiasia Inc.```
