@@ -13,15 +13,16 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-Here are some ideas to get you started:
+### Here are some ideas to get you started :
 
 - 🔭 | Currently working on Freelancer but more self-expression and unemployed
 - 🌱 | Currently learning on Student Collage Informatics Engineering
 - 💻 | Application program component architecture
 - 📚 | Still learning
 
-``1 year work experience as a Frontend Web Developer for a small company • 2 year Freelance project • As a student at the AMIKOM Purwokerto University campus & Independent Study at Binar Academy as part of Android Developer • Internship experience at Citiasia Inc.``
-
-My portfolio so far that has been published to the Play Store :
+### My portfolio so far that has been published to the Play Store :
 - [SecondHand](https://play.google.com/store/apps/details?id=id.co.binar.secondhand)
 - [Moviesapp](https://play.google.com/store/apps/details?id=com.anantyan.pmo)
+
+### ✨ About Me ✨
+1 year work experience as a Frontend Web Developer for a small company • 2 year Freelance project • As a student at the AMIKOM Purwokerto University campus & Independent Study at Binar Academy as part of Android Developer • Internship experience at Citiasia Inc.
