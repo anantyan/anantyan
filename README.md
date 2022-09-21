@@ -20,4 +20,8 @@ Here are some ideas to get you started:
 - 💻 | Application program component architecture
 - 📚 | Still learning
 
-``Pengalaman kerja 1 tahun menjadi Frontend Web Developer untuk perusahaan sekala kecil • Freelance project 2 tahun • Sebagai Mahasiswa di kampus Universitas AMIKOM Purwokerto & Indenpendent Study di Binar Academy bagian dari Android Developer • Pengalaman internship di Citiasia Inc.``
+``1 year work experience as a Frontend Web Developer for a small company • 2 year Freelance project • As a student at the AMIKOM Purwokerto University campus & Independent Study at Binar Academy as part of Android Developer • Internship experience at Citiasia Inc.``
+
+My portfolio so far that has been published to the Play Store :
+- [SecondHand](https://play.google.com/store/apps/details?id=id.co.binar.secondhand)
+- [Moviesapp](https://play.google.com/store/apps/details?id=com.anantyan.pmo)
