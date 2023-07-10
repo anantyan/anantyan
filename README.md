@@ -9,6 +9,7 @@ Mobile Developer
 - 🖥️ See my portfolio with my team at [Google Play Store](http://play.google.com/store/apps/dev?id=8696276020875450863), my portfolio so far that has been published to the Play Store :
   - [SecondHand](https://play.google.com/store/apps/details?id=id.co.binar.secondhand)
   - [Moviesapp](https://play.google.com/store/apps/details?id=com.anantyan.pmo)
+  - [MEFuko](https://play.google.com/store/apps/details?id=project.mefuko.mmse)
 - 🤝 I'm open to collaborating on Interesting project
 - ⚡ I'm secretly Spiderman... but don't tell me anyone
 
