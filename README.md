@@ -7,7 +7,6 @@ Mobile Developer
 1 year work experience as a Frontend Web Developer for a small company • 2 year Freelance project • As a Banchelor of Computer Science at the AMIKOM Purwokerto University campus & Experience as an Independent Study at Binar Academy as part of Android Developer • Internship experience at Citiasia Inc.
 
 - 🖥️ See my portfolio with my team at [Google Play Store](http://play.google.com/store/apps/dev?id=8696276020875450863), my portfolio so far that has been published to the Play Store :
-  - [SecondHand](https://play.google.com/store/apps/details?id=id.co.binar.secondhand)
   - [Moviesapp](https://play.google.com/store/apps/details?id=com.anantyan.pmo)
 - 🤝 I'm open to collaborating on Interesting project
 - ⚡ I'm secretly Spiderman... but don't tell me anyone
