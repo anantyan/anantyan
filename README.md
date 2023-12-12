@@ -4,7 +4,15 @@ Hi 👋 My name is Arya Rezza Anantya
 Mobile Developer
 ----------------
 
-1 year work experience as a Frontend Web Developer for a small company • 1 year Freelance project • As a Banchelor of Computer Science at the AMIKOM Purwokerto University campus & Experience as an Independent Study at Binar Academy as part of Android Developer • Internship experience at Citiasia Inc, and at present is in intensive learning through Bootcamp with part of BCA's Synrgy Academy and participating in the Virtual Internship Project Based program from PT. Bank Mandiri (Persero) Tbk.
+I am a Software Engineer with 1 year of experience in developing user interfaces for small-scale companies. In addition to work experience, I have also undergone freelance projects for 1 year, expanding my expertise in website development and mobile-based applications such as Android.
+
+As a student at AMIKOM University Purwokerto, I am pursuing a degree in a software development-related field. I also did self-study at Binar Academy, deepening my understanding as an Android Developer.
+
+My internship experience at Citiasia Inc. provided valuable insights into software development in a professional environment. I am currently completing an intensive bootcamp program with Synrgy Academy BCA, deepening my knowledge in specific areas of software development.
+
+Previously, I have also participated in PT Bank Mandiri (Persero) Tbk.'s Virtual Internship Project program, expanding my understanding in the banking industry and related technologies.
+
+I believe that the combination of my work experience, formal education, and self-learning has formed a strong foundation in the world of software development. I am excited to continue learning and contributing more in this industry.
 
 - 🖥️ See my other portfolio on playstore with my team at [Google Play Store](http://play.google.com/store/apps/dev?id=8696276020875450863)
 - 🤝 I'm open to collaborating on Interesting project
