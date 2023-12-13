@@ -23,7 +23,7 @@ Journey My Project Documentation
 
 ### News Project
 
-**************2023 - 1 Bulan**************
+*2023 - 1 Bulan*
 
 Project Task Virtual Internship assigned from Bank Mandiri x Rakamin Academy this project was made to practice the learning that has been absorbed during mentoring and directly implement it into a final project for 1 month, the project is about creating a news portal connected from [NewsApi.org](http://newsapi.org/) ke platform Android.
 
