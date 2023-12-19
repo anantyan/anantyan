@@ -1,4 +1,4 @@
-Hi 👋 My name is Arya Rezza Anantya
+Hi 👋 My name Rezza
 ===================================
 
 Mobile Developer
