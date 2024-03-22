@@ -21,6 +21,20 @@ I believe that the combination of my work experience, formal education, and self
 Journey My Project Documentation
 --------------------------------
 
+### WingsOn Project
+
+*2024 - 1 Bulan*
+
+E-Flight Ticket Platform (Benchmark of Garuda Indonesia). This platform is a place to buy and book flight tickets online, both one way and round trip. This platform opens and provides various types of domestic and foreign flights.
+
+**Role : Android Developer**
+
+Kotlin, Sqlite
+
+[Link Github](https://github.com/SFPT2B6-SynrgyFinalProject/BookingTicket) ↗️
+
+---
+
 ### News Project
 
 *2023 - 1 Bulan*
