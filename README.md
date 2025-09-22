@@ -1,4 +1,4 @@
-Hi 👋 My name Rezza
+Hi 👋 My name Arya
 ===================================
 
 Mobile Developer
