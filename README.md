@@ -4,7 +4,7 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 Mobile Developer
 ----------------
 
-I am a Software Engineer with 2 year of experience in developing user interfaces for small-scale companies. In addition to work experience, I have also undergone freelance projects for 2 year, expanding my expertise in website development and mobile-based applications such as Android.
+I am a Software Engineer with 3 year of experience in developing user interfaces for small-scale companies. In addition to work experience, I have also undergone freelance projects for 2 year, expanding my expertise in website development and mobile-based applications such as Android.
 
 As a student at AMIKOM University Purwokerto, I am pursuing a degree in a software development-related field. I also did self-study at Binar Academy, deepening my understanding as an Android Developer.
 
