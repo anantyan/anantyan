@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { CaretDown } from "@phosphor-icons/react/ssr";
 import { useLocale } from "@/lib/i18n/LocaleContext";
-import { ui, LANGUAGE_NAMES, type Locale } from "@/lib/i18n/ui";
+import { LANGUAGE_NAMES, type Locale } from "@/lib/i18n/ui";
 
 export function LocaleSwitcher() {
   const { locale, setLocale } = useLocale();
@@ -35,7 +35,6 @@ export function LocaleSwitcher() {
         type="button"
         aria-haspopup="menu"
         aria-expanded={open}
-        aria-label={ui[locale].localeSwitcher.buttonLabel}
         onClick={() => setOpen((value) => !value)}
         className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-2 text-sm text-foreground transition-colors hover:bg-surface"
       >
