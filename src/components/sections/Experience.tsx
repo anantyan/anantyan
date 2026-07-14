@@ -1,8 +1,16 @@
+"use client";
+
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { experience } from "@/lib/content";
+import { useLocale } from "@/lib/i18n/LocaleContext";
+import { content } from "@/lib/content";
+import { ui } from "@/lib/i18n/ui";
 
 export function Experience() {
+  const { locale } = useLocale();
+  const { experience } = content[locale];
+  const t = ui[locale].experience;
+
   return (
     <section
       id="pengalaman"
@@ -11,9 +19,9 @@ export function Experience() {
       <div className="mx-auto max-w-5xl">
         <RevealSection>
           <SectionHeading
-            eyebrow="Pengalaman"
-            title="Perjalanan Karier"
-            description="Dari front-end vanilla JS hingga mobile development lintas platform."
+            eyebrow={t.eyebrow}
+            title={t.title}
+            description={t.description}
           />
         </RevealSection>
         <div className="mt-10 divide-y divide-border border-t border-border">
