@@ -1,8 +1,16 @@
+"use client";
+
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { education, certifications, awards } from "@/lib/content";
+import { useLocale } from "@/lib/i18n/LocaleContext";
+import { content } from "@/lib/content";
+import { ui } from "@/lib/i18n/ui";
 
 export function Education() {
+  const { locale } = useLocale();
+  const { education, certifications, awards } = content[locale];
+  const t = ui[locale];
+
   return (
     <section
       id="pendidikan"
@@ -10,7 +18,7 @@ export function Education() {
     >
       <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-2">
         <RevealSection>
-          <SectionHeading eyebrow="Pendidikan" title="Latar Belakang Akademik" />
+          <SectionHeading eyebrow={t.education.eyebrow} title={t.education.title} />
           <div className="mt-8 space-y-6">
             {education.map((item) => (
               <div key={item.school}>
@@ -23,8 +31,8 @@ export function Education() {
         </RevealSection>
         <RevealSection delay={0.1}>
           <SectionHeading
-            eyebrow="Sertifikasi & Penghargaan"
-            title="Pengakuan & Pencapaian"
+            eyebrow={t.certifications.eyebrow}
+            title={t.certifications.title}
           />
           <ul className="mt-8 space-y-3 text-sm text-muted">
             {certifications.map((cert) => (
