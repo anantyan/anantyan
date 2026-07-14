@@ -1,13 +1,18 @@
+"use client";
+
 import { Button } from "@/components/ui/Button";
 import { HeroMonogram } from "@/components/sections/HeroMonogram";
-import { profile } from "@/lib/content";
+import { useLocale } from "@/lib/i18n/LocaleContext";
+import { content } from "@/lib/content";
+import { ui } from "@/lib/i18n/ui";
 
 export function Hero() {
+  const { locale } = useLocale();
+  const { profile } = content[locale];
+  const t = ui[locale].hero;
+
   return (
-    <section
-      id="top"
-      className="relative px-6 pb-20 pt-28 sm:pb-28 sm:pt-36"
-    >
+    <section id="top" className="relative px-6 pb-20 pt-28 sm:pb-28 sm:pt-36">
       <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
         <HeroMonogram />
         <p className="text-sm font-medium uppercase tracking-widest text-muted">
@@ -23,9 +28,9 @@ export function Hero() {
           {profile.tagline}
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <Button href="#proyek">Lihat Proyek</Button>
+          <Button href="#proyek">{t.viewProjects}</Button>
           <Button href={profile.resumeUrl} variant="secondary" download>
-            Unduh CV
+            {t.downloadResume}
           </Button>
         </div>
       </div>
