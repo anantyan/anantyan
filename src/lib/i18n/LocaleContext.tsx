@@ -27,6 +27,14 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const stored = window.localStorage.getItem(STORAGE_KEY);
     const detected = detectInitialLocale(stored, navigator.language);
+    // Intentional one-time client-only correction, not a bug: a static
+    // export has no server-side way to read localStorage/navigator.language,
+    // so the server/first paint always renders "id" and this effect
+    // synchronizes with those external sources after mount. The resulting
+    // single re-render (a possible id -> detected locale flash) is expected
+    // and accepted by design (see docs/superpowers/plans/2026-07-14-language-toggle.md,
+    // Task 4 Global Constraints).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLocaleState(detected);
   }, []);
 
