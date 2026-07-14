@@ -1,19 +1,27 @@
+"use client";
+
 import { ArrowUpRight } from "@phosphor-icons/react/ssr";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { ProjectIllustration } from "@/components/ui/ProjectIllustration";
-import { projects } from "@/lib/content";
+import { useLocale } from "@/lib/i18n/LocaleContext";
+import { content } from "@/lib/content";
+import { ui } from "@/lib/i18n/ui";
 
 export function Projects() {
+  const { locale } = useLocale();
+  const { projects } = content[locale];
+  const t = ui[locale].projects;
+
   return (
     <section id="proyek" className="border-t border-border px-6 py-20 sm:py-28">
       <div className="mx-auto max-w-5xl">
         <RevealSection>
           <SectionHeading
-            eyebrow="Proyek"
-            title="Karya Terpilih"
-            description="Sebagian proyek mobile yang pernah saya bangun, dari MVP tugas belajar hingga aplikasi produksi."
+            eyebrow={t.eyebrow}
+            title={t.title}
+            description={t.description}
           />
         </RevealSection>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
