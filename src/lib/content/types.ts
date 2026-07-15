@@ -30,7 +30,18 @@ export type EducationItem = {
   period: string;
 };
 
-export type ProjectIllustrationKey = "wingson" | "secondhand" | "news" | "recipe";
+export type ProjectIllustrationKey =
+  | "wingson"
+  | "secondhand"
+  | "news"
+  | "recipe"
+  | "candidate";
+
+export type ProjectLinks = {
+  repo?: string;
+  playStore?: string;
+  appStore?: string;
+};
 
 export type Project = {
   slug: string;
@@ -38,7 +49,7 @@ export type Project = {
   description: string;
   stack: string[];
   year: string;
-  repoUrl: string;
+  links: ProjectLinks;
   illustration: ProjectIllustrationKey;
 };
 

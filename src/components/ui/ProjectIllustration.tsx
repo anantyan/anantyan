@@ -22,6 +22,7 @@ export function ProjectIllustration({ variant, className }: Props) {
       {variant === "secondhand" && <SecondHandArt />}
       {variant === "news" && <NewsArt />}
       {variant === "recipe" && <RecipeArt />}
+      {variant === "candidate" && <CandidateArt />}
     </svg>
   );
 }
@@ -121,6 +122,47 @@ function RecipeArt() {
         strokeWidth="3"
       />
       <ellipse cx="160" cy="140" rx="64" ry="20" fill="var(--color-background)" stroke="var(--color-accent)" strokeWidth="3" />
+    </g>
+  );
+}
+
+function CandidateArt() {
+  return (
+    <g>
+      <rect
+        x="96"
+        y="70"
+        width="128"
+        height="112"
+        rx="12"
+        fill="var(--color-background)"
+        stroke="var(--color-accent)"
+        strokeWidth="3"
+      />
+      <circle cx="160" cy="108" r="18" fill="var(--color-accent)" opacity="0.16" />
+      <circle cx="160" cy="108" r="18" fill="none" stroke="var(--color-accent)" strokeWidth="3" />
+      <path
+        d="M128 166 a32 26 0 0 1 64 0"
+        fill="none"
+        stroke="var(--color-accent)"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <circle cx="222" cy="168" r="20" fill="var(--color-background)" stroke="var(--color-accent)" strokeWidth="3" />
+      <path
+        d="M213 168 l6 7 l12 -14"
+        fill="none"
+        stroke="var(--color-accent)"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M82 82 L85 91 L94 94 L85 97 L82 106 L79 97 L70 94 L79 91 Z"
+        fill="var(--color-accent)"
+        opacity="0.55"
+      />
+      <circle cx="240" cy="88" r="3" fill="var(--color-accent)" opacity="0.4" />
     </g>
   );
 }

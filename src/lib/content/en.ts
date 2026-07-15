@@ -45,7 +45,7 @@ export const enContent: ContentData = {
       duration: "1 yr 9 mo",
       location: "South Jakarta",
       description:
-        "Developing mobile applications with the Flutter framework, including several native code implementations for performance and platform-specific integrations.",
+        "Developing Mimo Candidate — an AI-powered job-seeker mobile app (Android & iOS) — with the Flutter framework, including several native code implementations for performance and platform-specific integrations.",
     },
     {
       company: "PT. Omnifit Solusi Nusantara",
@@ -126,13 +126,29 @@ export const enContent: ContentData = {
   ],
   projects: [
     {
+      slug: "mimo-candidate",
+      name: "Mimo Candidate",
+      description:
+        "An AI-powered job-seeker mobile app for candidates (Android & iOS), built with Flutter and BloC architecture — live in production with real users.",
+      stack: ["Flutter", "BloC", "AI Integration"],
+      year: "2024 — Present",
+      links: {
+        playStore:
+          "https://play.google.com/store/apps/details?id=id.mimo.app.mimo_candidate&hl=id",
+        appStore: "https://apps.apple.com/id/app/mimo-candidate/id6754310239?l=id",
+      },
+      illustration: "candidate",
+    },
+    {
       slug: "wingson",
       name: "WingsOn",
       description:
         "A digital flight ticket booking platform with a streamlined search, seat selection, and checkout flow.",
       stack: ["Kotlin", "MVVM", "Firebase"],
       year: "2024",
-      repoUrl: "https://github.com/anantyan/WingsOn",
+      links: {
+        repo: "https://github.com/SFPT2B6-SynrgyFinalProject/BookingTicket",
+      },
       illustration: "wingson",
     },
     {
@@ -142,7 +158,7 @@ export const enContent: ContentData = {
         "A marketplace for buying and selling used goods, with a direct price-negotiation flow between users.",
       stack: ["Kotlin", "Clean Architecture", "Firebase"],
       year: "2023",
-      repoUrl: "https://github.com/anantyan/SecondHand",
+      links: { repo: "https://github.com/anantyan/SecondHand" },
       illustration: "secondhand",
     },
     {
@@ -152,7 +168,9 @@ export const enContent: ContentData = {
         "A news portal connected to NewsApi.org, featuring categorized browsing and article search.",
       stack: ["Kotlin", "REST API", "MVVM"],
       year: "2023",
-      repoUrl: "https://github.com/anantyan/News-Project",
+      links: {
+        repo: "https://github.com/anantyan/VirtualInternshipMandiri",
+      },
       illustration: "news",
     },
     {
@@ -162,7 +180,7 @@ export const enContent: ContentData = {
         "A food and drink recipe listing app — the capstone challenge project for the SYNRGY Academy training track.",
       stack: ["Kotlin", "Jetpack", "Room"],
       year: "2023",
-      repoUrl: "https://github.com/anantyan/SynrgyChapter8",
+      links: { repo: "https://github.com/anantyan/SynrgyChapter8" },
       illustration: "recipe",
     },
   ],

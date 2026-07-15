@@ -45,7 +45,7 @@ export const idContent: ContentData = {
       duration: "1 thn 9 bln",
       location: "Jakarta Selatan",
       description:
-        "Mengembangkan aplikasi mobile dengan Flutter framework, termasuk beberapa implementasi kode native untuk kebutuhan performa dan integrasi platform-spesifik.",
+        "Mengembangkan Mimo Candidate — aplikasi mobile pencari kerja berbasis AI (Android & iOS) — dengan Flutter framework, termasuk beberapa implementasi kode native untuk kebutuhan performa dan integrasi platform-spesifik.",
     },
     {
       company: "PT. Omnifit Solusi Nusantara",
@@ -123,13 +123,29 @@ export const idContent: ContentData = {
   awards: ["Lomba Karya Cipta Nasional Bangka Tengah", "LKS Web Design"],
   projects: [
     {
+      slug: "mimo-candidate",
+      name: "Mimo Candidate",
+      description:
+        "Aplikasi mobile pencari kerja berbasis AI untuk kandidat (Android & iOS), dibangun dengan Flutter dan arsitektur BloC — live di produksi dan dipakai pengguna nyata.",
+      stack: ["Flutter", "BloC", "AI Integration"],
+      year: "2024 — Sekarang",
+      links: {
+        playStore:
+          "https://play.google.com/store/apps/details?id=id.mimo.app.mimo_candidate&hl=id",
+        appStore: "https://apps.apple.com/id/app/mimo-candidate/id6754310239?l=id",
+      },
+      illustration: "candidate",
+    },
+    {
       slug: "wingson",
       name: "WingsOn",
       description:
         "Platform pemesanan tiket pesawat digital dengan alur pencarian, pemilihan kursi, dan checkout yang ringkas.",
       stack: ["Kotlin", "MVVM", "Firebase"],
       year: "2024",
-      repoUrl: "https://github.com/anantyan/WingsOn",
+      links: {
+        repo: "https://github.com/SFPT2B6-SynrgyFinalProject/BookingTicket",
+      },
       illustration: "wingson",
     },
     {
@@ -139,7 +155,7 @@ export const idContent: ContentData = {
         "Marketplace jual-beli barang bekas dengan alur negosiasi harga antar pengguna secara langsung.",
       stack: ["Kotlin", "Clean Architecture", "Firebase"],
       year: "2023",
-      repoUrl: "https://github.com/anantyan/SecondHand",
+      links: { repo: "https://github.com/anantyan/SecondHand" },
       illustration: "secondhand",
     },
     {
@@ -149,7 +165,9 @@ export const idContent: ContentData = {
         "Portal berita yang terhubung ke NewsApi.org, menampilkan kategori dan pencarian artikel terkini.",
       stack: ["Kotlin", "REST API", "MVVM"],
       year: "2023",
-      repoUrl: "https://github.com/anantyan/News-Project",
+      links: {
+        repo: "https://github.com/anantyan/VirtualInternshipMandiri",
+      },
       illustration: "news",
     },
     {
@@ -159,7 +177,7 @@ export const idContent: ContentData = {
         "Aplikasi listing resep makanan & minuman — proyek tantangan akhir chapter pelatihan SYNRGY Academy.",
       stack: ["Kotlin", "Jetpack", "Room"],
       year: "2023",
-      repoUrl: "https://github.com/anantyan/SynrgyChapter8",
+      links: { repo: "https://github.com/anantyan/SynrgyChapter8" },
       illustration: "recipe",
     },
   ],
