@@ -14,7 +14,7 @@ export const idContent: ContentData = {
       linkedin: "https://www.linkedin.com/in/anantyan",
       github: "https://github.com/anantyan",
     },
-    resumeUrl: "/assets/resume.pdf",
+    resumeUrl: "assets/resume.pdf",
     languages: [
       { name: "Bahasa Indonesia", level: "Native" },
       { name: "Bahasa Inggris", level: "Limited Working" },
