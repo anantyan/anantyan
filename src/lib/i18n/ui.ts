@@ -51,8 +51,8 @@ export type UiStrings = {
 };
 
 export const LANGUAGE_NAMES: Record<Locale, string> = {
-  id: "Bahasa Indonesia",
-  en: "English",
+  id: "ID",
+  en: "EN",
 };
 
 export const ui: Record<Locale, UiStrings> = {
