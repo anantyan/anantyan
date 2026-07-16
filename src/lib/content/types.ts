@@ -11,7 +11,6 @@ export type Profile = {
     linkedin: string;
     github: string;
   };
-  resumeUrl: string;
   languages: { name: string; level: string }[];
 };
 

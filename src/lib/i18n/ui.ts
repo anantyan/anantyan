@@ -12,7 +12,6 @@ export type UiStrings = {
   };
   hero: {
     viewProjects: string;
-    downloadResume: string;
   };
   about: {
     eyebrow: string;
@@ -42,7 +41,6 @@ export type UiStrings = {
     title: string;
     body: string;
     contactMe: string;
-    downloadResume: string;
     footerBuiltWith: string;
   };
   localeSwitcher: {
@@ -68,7 +66,6 @@ export const ui: Record<Locale, UiStrings> = {
     },
     hero: {
       viewProjects: "Lihat Proyek",
-      downloadResume: "Unduh CV",
     },
     about: {
       eyebrow: "Tentang",
@@ -100,7 +97,6 @@ export const ui: Record<Locale, UiStrings> = {
       title: "Mari berkolaborasi membangun aplikasi berikutnya",
       body: "Terbuka untuk peluang penuh waktu, kontrak, maupun proyek freelance seputar Android, Flutter, dan iOS.",
       contactMe: "Hubungi Saya",
-      downloadResume: "Unduh CV",
       footerBuiltWith: "Dibuat dengan Next.js & Tailwind CSS.",
     },
     localeSwitcher: {
@@ -119,7 +115,6 @@ export const ui: Record<Locale, UiStrings> = {
     },
     hero: {
       viewProjects: "View Projects",
-      downloadResume: "Download Resume",
     },
     about: {
       eyebrow: "About",
@@ -151,7 +146,6 @@ export const ui: Record<Locale, UiStrings> = {
       title: "Let's build the next app together",
       body: "Open to full-time, contract, and freelance opportunities in Android, Flutter, and iOS.",
       contactMe: "Contact Me",
-      downloadResume: "Download Resume",
       footerBuiltWith: "Built with Next.js & Tailwind CSS.",
     },
     localeSwitcher: {
