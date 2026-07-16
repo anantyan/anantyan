@@ -13,10 +13,56 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://anantyan.github.io/anantyan/";
+const title = "Arya Rezza Anantya — Mobile Developer";
+const description =
+  "Mobile Developer specializing in Kotlin, Flutter, and Swift — building production-ready Android and iOS apps. Explore my experience, projects, and get in touch for freelance or full-time opportunities.";
+
 export const metadata: Metadata = {
-  title: "Arya Rezza Anantya — Mobile Developer",
-  description:
-    "Portofolio Arya Rezza Anantya, Mobile Developer yang berfokus pada Kotlin, Flutter, dan Swift — pengalaman, proyek, dan cara menghubungi.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  keywords: [
+    "Mobile Developer",
+    "Flutter Developer",
+    "Kotlin Developer",
+    "Android Developer",
+    "iOS Developer",
+    "Freelance Mobile Developer",
+    "Arya Rezza Anantya",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "Arya Rezza Anantya — Portfolio",
+    images: ["/opengraph-image"],
+    locale: "en_US",
+    type: "profile",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/opengraph-image"],
+  },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Arya Rezza Anantya",
+  jobTitle: "Mobile Developer",
+  url: siteUrl,
+  sameAs: ["https://www.linkedin.com/in/anantyan", "https://github.com/anantyan"],
+  knowsAbout: ["Kotlin", "Flutter", "Swift", "Android Development", "iOS Development"],
 };
 
 export default function RootLayout({
@@ -30,6 +76,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <LocaleProvider>{children}</LocaleProvider>
       </body>
     </html>
