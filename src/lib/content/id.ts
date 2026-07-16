@@ -17,7 +17,7 @@ export const idContent: ContentData = {
     resumeUrl: "assets/resume.pdf",
     languages: [
       { name: "Bahasa Indonesia", level: "Native" },
-      { name: "Bahasa Inggris", level: "Limited Working" },
+      { name: "Bahasa Inggris", level: "Professional Working" },
     ],
   },
   skills: [
