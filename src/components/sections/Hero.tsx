@@ -29,9 +29,6 @@ export function Hero() {
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Button href="#proyek">{t.viewProjects}</Button>
-          <Button href={profile.resumeUrl} variant="secondary" download>
-            {t.downloadResume}
-          </Button>
         </div>
       </div>
     </section>

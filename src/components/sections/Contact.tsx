@@ -28,9 +28,6 @@ export function Contact() {
               <EnvelopeSimple size={18} />
               {t.contactMe}
             </Button>
-            <Button href={profile.resumeUrl} variant="secondary" download>
-              {t.downloadResume}
-            </Button>
           </div>
           <div className="mt-8 flex items-center justify-center gap-6 text-muted">
             <a
