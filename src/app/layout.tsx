@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const assetBasePath = process.env.GITHUB_ACTIONS === "true" ? "/anantyan" : "";
 const siteUrl = "https://anantyan.github.io/anantyan/";
 const title = "Arya Rezza Anantya — Mobile Developer";
 const description =
@@ -38,12 +39,16 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: `${assetBasePath}/icon.svg`,
+    apple: `${assetBasePath}/apple-icon.png`,
+  },
   openGraph: {
     title,
     description,
     url: "/",
     siteName: "Arya Rezza Anantya — Portfolio",
-    images: ["/opengraph-image"],
+    images: ["/opengraph-image.png"],
     locale: "en_US",
     type: "profile",
   },
@@ -51,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/opengraph-image"],
+    images: ["/opengraph-image.png"],
   },
 };
 

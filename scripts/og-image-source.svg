@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#faf9f6" />
+  <rect x="530" y="160" width="140" height="140" rx="32" fill="#f2efe8" stroke="#e7e3da" stroke-width="3" />
+  <text x="600" y="248" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="56" fill="#b8673f" text-anchor="middle">AR</text>
+  <text x="600" y="368" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="64" fill="#1c1a17" text-anchor="middle">Arya Rezza Anantya</text>
+  <text x="600" y="418" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="34" fill="#b8673f" text-anchor="middle">Mobile Developer</text>
+</svg>
