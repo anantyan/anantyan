@@ -15,7 +15,7 @@ Previously, I have also participated in PT Bank Mandiri (Persero) Tbk.'s Virtual
 I believe that the combination of my work experience, formal education, and self-learning has formed a strong foundation in the world of software development. I am excited to continue learning and contributing more in this industry.
 
 * 🌍  I'm based in Purwokerto, Indonesia
-* 🖥️  See my portfolio at [Google Play Store](http://play.google.com/store/apps/dev?id=8696276020875450863)
+* 🖥️  See my portfolio at [GitHub Pages](https://anantyan.github.io/anantyan/)
 * 🚀  I'm currently working on [Mimo Ai-Recruiter](http://mimo.id)
 * 🧠  I'm currently learning Flutter & Jetpack Compose
 * 👥  I'm looking to collaborate on Open to collaborating on Interesting project
