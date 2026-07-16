@@ -17,7 +17,7 @@ export const enContent: ContentData = {
     resumeUrl: "assets/resume.pdf",
     languages: [
       { name: "Indonesian", level: "Native" },
-      { name: "English", level: "Limited Working" },
+      { name: "English", level: "Professional Working" },
     ],
   },
   skills: [
