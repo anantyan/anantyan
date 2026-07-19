@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowUpRight } from "@phosphor-icons/react/ssr";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { useLocale } from "@/lib/i18n/LocaleContext";
@@ -36,9 +37,24 @@ export function Education() {
           />
           <ul className="mt-8 space-y-3 text-sm text-muted">
             {certifications.map((cert) => (
-              <li key={cert} className="flex gap-3">
+              <li key={cert.label} className="flex gap-3">
                 <span className="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-accent" />
-                {cert}
+                {cert.url ? (
+                  <a
+                    href={cert.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group inline-flex items-start gap-1.5 transition-colors hover:text-accent"
+                  >
+                    <span>{cert.label}</span>
+                    <ArrowUpRight
+                      size={14}
+                      className="mt-0.5 flex-none text-muted transition-colors group-hover:text-accent"
+                    />
+                  </a>
+                ) : (
+                  cert.label
+                )}
               </li>
             ))}
           </ul>

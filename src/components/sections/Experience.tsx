@@ -1,5 +1,6 @@
 "use client";
 
+import { FilePdf } from "@phosphor-icons/react/ssr";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { useLocale } from "@/lib/i18n/LocaleContext";
@@ -42,6 +43,17 @@ export function Experience() {
                   <p className="mt-2 max-w-[65ch] text-sm leading-relaxed text-muted">
                     {item.description}
                   </p>
+                  {item.certificateUrl && (
+                    <a
+                      href={item.certificateUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
+                    >
+                      <FilePdf size={14} />
+                      {t.viewCertificate}
+                    </a>
+                  )}
                 </div>
               </div>
             </RevealSection>
