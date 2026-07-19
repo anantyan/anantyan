@@ -5,6 +5,7 @@ export type UiStrings = {
     about: string;
     experience: string;
     projects: string;
+    media: string;
     contact: string;
     contactCta: string;
     openMenu: string;
@@ -22,11 +23,19 @@ export type UiStrings = {
     eyebrow: string;
     title: string;
     description: string;
+    viewCertificate: string;
   };
   projects: {
     eyebrow: string;
     title: string;
     description: string;
+  };
+  media: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    featuredHeading: string;
+    readArticle: string;
   };
   education: {
     eyebrow: string;
@@ -59,6 +68,7 @@ export const ui: Record<Locale, UiStrings> = {
       about: "Tentang",
       experience: "Pengalaman",
       projects: "Proyek",
+      media: "Media",
       contact: "Kontak",
       contactCta: "Hubungi Saya",
       openMenu: "Buka menu navigasi",
@@ -77,12 +87,21 @@ export const ui: Record<Locale, UiStrings> = {
       title: "Perjalanan Karier",
       description:
         "Dari front-end vanilla JS hingga mobile development lintas platform.",
+      viewCertificate: "Lihat Sertifikat",
     },
     projects: {
       eyebrow: "Proyek",
       title: "Karya Terpilih",
       description:
         "Sebagian proyek mobile yang pernah saya bangun, dari MVP tugas belajar hingga aplikasi produksi.",
+    },
+    media: {
+      eyebrow: "Sorotan Media",
+      title: "Liputan & Tulisan",
+      description:
+        "Sorotan media dan tulisan teknis yang pernah saya publikasikan.",
+      featuredHeading: "Artikel Unggulan",
+      readArticle: "Baca di Medium",
     },
     education: {
       eyebrow: "Pendidikan",
@@ -108,6 +127,7 @@ export const ui: Record<Locale, UiStrings> = {
       about: "About",
       experience: "Experience",
       projects: "Projects",
+      media: "Media",
       contact: "Contact",
       contactCta: "Contact Me",
       openMenu: "Open navigation menu",
@@ -126,12 +146,20 @@ export const ui: Record<Locale, UiStrings> = {
       title: "Career Journey",
       description:
         "From vanilla JS front-end work to cross-platform mobile development.",
+      viewCertificate: "View Certificate",
     },
     projects: {
       eyebrow: "Projects",
       title: "Selected Work",
       description:
         "A selection of mobile projects I've built, from learning-project MVPs to production apps.",
+    },
+    media: {
+      eyebrow: "Media Coverage",
+      title: "Press & Writing",
+      description: "Press mentions and technical writing I've published.",
+      featuredHeading: "Featured Article",
+      readArticle: "Read on Medium",
     },
     education: {
       eyebrow: "Education",

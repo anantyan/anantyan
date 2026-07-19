@@ -38,7 +38,7 @@ export const enContent: ContentData = {
   ],
   experience: [
     {
-      company: "Nera Teknologi Utama",
+      company: "PT. Nera Teknologi Utama",
       role: "Mobile Developer",
       period: "November 2024 — Present",
       duration: "1 yr 9 mo",
@@ -63,15 +63,17 @@ export const enContent: ContentData = {
       location: "Yogyakarta",
       description:
         "Completed the training track up to Platinum level: Navigation Jetpack, Single Activity Architecture, ViewModel & Room Database, Networking, Clean Architecture, Testing Usability, and CI/CD.",
+      certificateUrl: "/certificates/synrgy-academy-android-engineering.pdf",
     },
     {
-      company: "PT Bank Mandiri (Persero) Tbk.",
+      company: "PT. Bank Mandiri (Persero) Tbk.",
       role: "Project-Based Virtual Intern — Mobile Developer",
       period: "October 2023",
       duration: "1 mo",
       location: "Remote — via Rakamin Academy",
       description:
         "Studied MVVM design patterns, material-design-based interface layouts, and unit testing principles and tooling.",
+      certificateUrl: "/certificates/rakamin-bank-mandiri-internship.pdf",
     },
     {
       company: "Citiasia Inc. x Kampus Merdeka",
@@ -81,6 +83,7 @@ export const enContent: ContentData = {
       location: "South Jakarta",
       description:
         "Built Flutter applications (Android + iOS) from the ground up and applied the BloC pattern, taking an MVP project from kickoff to completion in a team setting.",
+      certificateUrl: "/certificates/citiasia-internship.pdf",
     },
     {
       company: "Binar Academy",
@@ -90,9 +93,10 @@ export const enContent: ContentData = {
       location: "Tangerang, Banten",
       description:
         "Independent-study Android bootcamp reaching Expert/Gold level in the MVVM design pattern, completing a final MVP-based capstone project.",
+      certificateUrl: "/certificates/binar-academy-bootcamp.pdf",
     },
     {
-      company: "CV Prima Arya Hutama",
+      company: "CV. Prima Arya Hutama",
       role: "Front End Developer",
       period: "July 2018 — March 2019",
       duration: "9 mo",
@@ -114,10 +118,24 @@ export const enContent: ContentData = {
     },
   ],
   certifications: [
-    "Certified Intern — Citiasia Inc. x Kampus Merdeka Certified Internship Program",
-    "Mobile Programming 101: Basic Android and Kotlin",
-    "Certificate of Achievement — Bank Mandiri Mobile Apps Developer Project-Based Internship",
-    "RH 124 — Red Hat Enterprise Linux System Administration I",
+    {
+      label:
+        "Certified Intern — Citiasia Inc. x Kampus Merdeka Certified Internship Program",
+      url: "/certificates/citiasia-internship.pdf",
+    },
+    {
+      label: "Mobile Programming 101: Basic Android and Kotlin",
+      url: "/certificates/mobile-programming-101.pdf",
+    },
+    {
+      label:
+        "Certificate of Achievement — Bank Mandiri Mobile Apps Developer Project-Based Internship",
+      url: "/certificates/rakamin-bank-mandiri-internship.pdf",
+    },
+    {
+      label: "RH 124 — Red Hat Enterprise Linux System Administration I",
+      url: "/certificates/rh-124-linux-administration.pdf",
+    },
   ],
   awards: [
     "Bangka Tengah National Creative Works Competition",
@@ -183,4 +201,32 @@ export const enContent: ContentData = {
       illustration: "recipe",
     },
   ],
+  media: {
+    eventLabel: "Bangka Tengah National Creative Works Competition 2016",
+    coverImage: "/media/lkcn-bangka-tengah-2016.jpg",
+    newsLinks: [
+      {
+        headline: "Sekda Buka LKCN Bangka Tengah 2016",
+        outlet: "Tribun Bangka",
+        url: "https://bangka.tribunnews.com/2016/12/06/sekda-buka-lkcn-bangka-tengah-2016",
+      },
+      {
+        headline: "Siswa SMK Bangka Tengah Juara LKCN",
+        outlet: "Antara News Babel",
+        url: "https://babel.antaranews.com/berita/48690/siswa-smk-bangka-tengah-juara-lkcn",
+      },
+      {
+        headline: "Bangka Tengah Tuan Rumah LKCN",
+        outlet: "Antara News Babel",
+        url: "https://babel.antaranews.com/berita/48172/bangka-tengah-tuan-rumah-lkcn",
+      },
+    ],
+    featuredArticle: {
+      title: "6 Fundamental Truths for Mastering the Modern Flutter Ecosystem",
+      summary:
+        "Architectural principles for mastering Flutter — comparing state management approaches (Riverpod, BLoC, Signals) and building a clean, testable domain layer.",
+      url: "https://anantyan.medium.com/6-fundamental-truths-for-mastering-the-modern-flutter-ecosystem-211518c6410c",
+      platform: "Medium",
+    },
+  },
 };

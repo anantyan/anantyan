@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { LocaleProvider } from "@/lib/i18n/LocaleContext";
 import { StarField } from "@/components/motion/StarField";
+import { assetBasePath } from "@/lib/assetBasePath";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,7 +15,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const assetBasePath = process.env.GITHUB_ACTIONS === "true" ? "/anantyan" : "";
 const siteUrl = "https://anantyan.github.io/anantyan/";
 const title = "Arya Rezza Anantya — Mobile Developer";
 const description =

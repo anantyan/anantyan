@@ -16,6 +16,7 @@ export function Nav() {
     { href: "#tentang", label: t.about },
     { href: "#pengalaman", label: t.experience },
     { href: "#proyek", label: t.projects },
+    { href: "#media", label: t.media },
     { href: "#kontak", label: t.contact },
   ];
 
