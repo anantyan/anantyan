@@ -37,6 +37,12 @@ export type EducationItem = {
 };
 
 export type Certification = {
+  /**
+   * Stable, locale-invariant identifier for use as a React list key.
+   * `label` is translated per locale, so keying on it would force a
+   * remount (not an in-place update) whenever the locale switches.
+   */
+  id: string;
   label: string;
   url?: string;
 };

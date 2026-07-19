@@ -125,20 +125,24 @@ export const enContent: ContentData = {
   ],
   certifications: [
     {
+      id: "citiasia-msib",
       label:
         "Certified Intern — Citiasia Inc. x Kampus Merdeka Certified Internship Program",
       url: "/certificates/citiasia-internship.pdf",
     },
     {
+      id: "mobile-programming-101",
       label: "Mastering Mobile Programming Android — Skill Academy by Ruangguru",
       url: "/certificates/mobile-programming-101.pdf",
     },
     {
+      id: "bank-mandiri-internship",
       label:
         "Certificate of Achievement — Bank Mandiri Mobile Apps Developer Project-Based Internship",
       url: "/certificates/rakamin-bank-mandiri-internship.pdf",
     },
     {
+      id: "rh-124",
       label: "RH 124 — Red Hat Enterprise Linux System Administration I",
       url: "/certificates/rh-124-linux-administration.pdf",
     },
