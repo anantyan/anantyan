@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "node scripts/generate-ongoing-duration.mjs",
+    "predev": "node scripts/generate-ongoing-duration.mjs",
+    "prebuild": "node scripts/generate-ongoing-duration.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

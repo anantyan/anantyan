@@ -19,6 +19,12 @@ export type ExperienceItem = {
   role: string;
   period: string;
   duration: string;
+  /**
+   * Key into ongoing-start-dates.json — set only on the still-ongoing
+   * ("Present"/"Sekarang") entry so its duration can be recomputed live
+   * in the browser instead of staying frozen at build time.
+   */
+  durationKey?: string;
   location: string;
   description: string;
   certificateUrl?: string;
