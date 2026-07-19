@@ -38,7 +38,7 @@ export function Education() {
           />
           <ul className="mt-8 space-y-3 text-sm text-muted">
             {certifications.map((cert) => (
-              <li key={cert.label} className="flex gap-3">
+              <li key={cert.id} className="flex gap-3">
                 <span className="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-accent" />
                 {cert.url ? (
                   <a
