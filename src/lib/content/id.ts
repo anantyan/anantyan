@@ -124,7 +124,7 @@ export const idContent: ContentData = {
       url: "/certificates/citiasia-internship.pdf",
     },
     {
-      label: "Mobile Programming 101: Basic Android dan Kotlin",
+      label: "Mastering Mobile Programming Android — Skill Academy by Ruangguru",
       url: "/certificates/mobile-programming-101.pdf",
     },
     {
