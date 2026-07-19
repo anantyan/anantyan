@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { content } from "@/lib/content";
 import { ui } from "@/lib/i18n/ui";
+import { assetBasePath } from "@/lib/assetBasePath";
 
 export function Education() {
   const { locale } = useLocale();
@@ -41,7 +42,7 @@ export function Education() {
                 <span className="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-accent" />
                 {cert.url ? (
                   <a
-                    href={cert.url}
+                    href={`${assetBasePath}${cert.url}`}
                     target="_blank"
                     rel="noreferrer"
                     className="group inline-flex items-start gap-1.5 transition-colors hover:text-accent"

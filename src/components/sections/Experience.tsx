@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { content } from "@/lib/content";
 import { ui } from "@/lib/i18n/ui";
+import { assetBasePath } from "@/lib/assetBasePath";
 
 export function Experience() {
   const { locale } = useLocale();
@@ -45,7 +46,7 @@ export function Experience() {
                   </p>
                   {item.certificateUrl && (
                     <a
-                      href={item.certificateUrl}
+                      href={`${assetBasePath}${item.certificateUrl}`}
                       target="_blank"
                       rel="noreferrer"
                       className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
