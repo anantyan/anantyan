@@ -7,6 +7,23 @@ import { useLocale } from "@/lib/i18n/LocaleContext";
 import { content } from "@/lib/content";
 import { ui } from "@/lib/i18n/ui";
 import { assetBasePath } from "@/lib/assetBasePath";
+import { useLiveOngoingDuration } from "@/lib/useLiveOngoingDuration";
+import type { ExperienceItem, Locale } from "@/lib/content/types";
+
+function ExperienceDuration({
+  item,
+  locale,
+}: {
+  item: ExperienceItem;
+  locale: Locale;
+}) {
+  const duration = useLiveOngoingDuration(
+    item.duration,
+    item.durationKey,
+    locale
+  );
+  return <p className="text-xs text-muted/70">{duration}</p>;
+}
 
 export function Experience() {
   const { locale } = useLocale();
@@ -32,7 +49,7 @@ export function Experience() {
               <div className="grid gap-2 py-6 sm:grid-cols-[200px_1fr] sm:gap-8">
                 <div>
                   <p className="text-sm font-medium text-muted">{item.period}</p>
-                  <p className="text-xs text-muted/70">{item.duration}</p>
+                  <ExperienceDuration item={item} locale={locale} />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">

@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# generated at build/install time — see scripts/generate-ongoing-duration.mjs
+/src/lib/content/generated/
+
 # production
 /build
 

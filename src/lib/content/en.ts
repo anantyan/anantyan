@@ -1,4 +1,6 @@
 import type { ContentData } from "./types";
+import { formatOngoingDuration } from "@/lib/formatDuration";
+import ongoingDuration from "./generated/ongoing-duration.json";
 
 export const enContent: ContentData = {
   profile: {
@@ -41,7 +43,11 @@ export const enContent: ContentData = {
       company: "PT. Nera Teknologi Utama",
       role: "Mobile Developer",
       period: "November 2024 — Present",
-      duration: "1 yr 9 mo",
+      duration: formatOngoingDuration(
+        ongoingDuration["nera-teknologi-utama"],
+        "en"
+      ),
+      durationKey: "nera-teknologi-utama",
       location: "South Jakarta",
       description:
         "Developing Mimo Candidate — an AI-powered job-seeker mobile app (Android & iOS) — with the Flutter framework, including several native code implementations for performance and platform-specific integrations.",
