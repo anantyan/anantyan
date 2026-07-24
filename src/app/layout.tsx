@@ -2,8 +2,20 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { LocaleProvider } from "@/lib/i18n/LocaleContext";
 import { StarField } from "@/components/motion/StarField";
+import { ThemeProvider } from "@/lib/theme/ThemeContext";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { THEME_STORAGE_KEY } from "@/lib/theme/constants";
 import { assetBasePath } from "@/lib/assetBasePath";
 import "./globals.css";
+
+// Runs before hydration, as the very first thing in <body>, so the correct
+// theme class is applied before anything paints. This is a static export
+// (no server-side rendering at request time), so this is the only way to
+// avoid a light/dark flash on load — mirrors the pattern used by libraries
+// like next-themes.
+const themeInitScript = `(function(){try{var s=localStorage.getItem(${JSON.stringify(
+  THEME_STORAGE_KEY,
+)});var t=s==="light"||s==="dark"||s==="system"?s:"system";var d=t==="system"?window.matchMedia("(prefers-color-scheme: dark)").matches:t==="dark";if(d){document.documentElement.classList.add("dark");}}catch(e){}})();`;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -79,17 +91,24 @@ export default function RootLayout({
   return (
     <html
       lang="id"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col text-foreground">
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
           }}
         />
-        <StarField />
-        <LocaleProvider>{children}</LocaleProvider>
+        <ThemeProvider>
+          <StarField />
+          <LocaleProvider>
+            {children}
+            <ThemeToggle />
+          </LocaleProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
