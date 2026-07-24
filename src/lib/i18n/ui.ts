@@ -55,6 +55,11 @@ export type UiStrings = {
   localeSwitcher: {
     buttonLabel: string;
   };
+  themeToggle: {
+    light: string;
+    dark: string;
+    system: string;
+  };
 };
 
 export const LANGUAGE_NAMES: Record<Locale, string> = {
@@ -121,6 +126,11 @@ export const ui: Record<Locale, UiStrings> = {
     localeSwitcher: {
       buttonLabel: "Pilih bahasa",
     },
+    themeToggle: {
+      light: "Mode terang aktif — klik untuk ganti ke mode gelap",
+      dark: "Mode gelap aktif — klik untuk ganti ke mode sistem",
+      system: "Mode sistem aktif — klik untuk ganti ke mode terang",
+    },
   },
   en: {
     nav: {
@@ -178,6 +188,11 @@ export const ui: Record<Locale, UiStrings> = {
     },
     localeSwitcher: {
       buttonLabel: "Select language",
+    },
+    themeToggle: {
+      light: "Light mode active — click to switch to dark mode",
+      dark: "Dark mode active — click to switch to system mode",
+      system: "System mode active — click to switch to light mode",
     },
   },
 };
