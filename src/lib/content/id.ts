@@ -150,6 +150,16 @@ export const idContent: ContentData = {
   awards: ["Lomba Karya Cipta Nasional Bangka Tengah", "LKS Web Design"],
   projects: [
     {
+      slug: "glimpse",
+      name: "Glimpse",
+      description:
+        "Beri ruang untuk merasa dan melepaskan secara anonim tanpa dihakimi melalui jurnal harian.",
+      stack: ["Flutter", "BloC", "AI Integration"],
+      year: "2024",
+      links: {},
+      illustration: "glimpse",
+    },
+    {
       slug: "mimo-candidate",
       name: "Mimo Candidate",
       description:

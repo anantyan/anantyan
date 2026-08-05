@@ -153,6 +153,16 @@ export const enContent: ContentData = {
   ],
   projects: [
     {
+      slug: "glimpse",
+      name: "Glimpse",
+      description:
+        "Give yourself space to feel and let go anonymously without judgment through a daily journal.",
+      stack: ["Flutter", "BloC", "AI Integration"],
+      year: "2024",
+      links: {},
+      illustration: "glimpse",
+    },
+    {
       slug: "mimo-candidate",
       name: "Mimo Candidate",
       description:

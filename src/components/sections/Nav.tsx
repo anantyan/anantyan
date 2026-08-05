@@ -73,7 +73,7 @@ export function Nav() {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setOpen(false)}
+                  onClick={() => setTimeout(() => setOpen(false), 150)}
                   className="rounded-lg px-2 py-2 text-muted transition-colors hover:bg-surface hover:text-foreground"
                 >
                   {link.label}
