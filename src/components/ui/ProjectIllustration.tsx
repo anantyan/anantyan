@@ -23,7 +23,46 @@ export function ProjectIllustration({ variant, className }: Props) {
       {variant === "news" && <NewsArt />}
       {variant === "recipe" && <RecipeArt />}
       {variant === "candidate" && <CandidateArt />}
+      {variant === "glimpse" && <GlimpseArt />}
     </svg>
+  );
+}
+
+function GlimpseArt() {
+  return (
+    <g>
+      <rect
+        x="120"
+        y="80"
+        width="90"
+        height="110"
+        rx="6"
+        fill="var(--color-border)"
+        opacity="0.3"
+      />
+      <rect
+        x="100"
+        y="60"
+        width="100"
+        height="120"
+        rx="6"
+        fill="var(--color-background)"
+        stroke="var(--color-accent)"
+        strokeWidth="3"
+      />
+      <path d="M94 76 h12 M94 96 h12 M94 116 h12 M94 136 h12 M94 156 h12" stroke="var(--color-accent)" strokeWidth="3" strokeLinecap="round" />
+      <path d="M120 86 h60 M120 106 h60 M120 126 h40 M120 146 h50" stroke="var(--color-accent)" strokeWidth="3" strokeLinecap="round" opacity="0.5" />
+      
+      <circle cx="230" cy="140" r="18" fill="var(--color-accent)" opacity="0.1" />
+      <circle cx="230" cy="140" r="18" fill="none" stroke="var(--color-accent)" strokeWidth="3" />
+      <path d="M224 142 c4 6 8 6 12 0" fill="none" stroke="var(--color-accent)" strokeWidth="2.5" strokeLinecap="round" />
+      
+      <path
+        d="M210 50 L213 59 L222 62 L213 65 L210 74 L207 65 L198 62 L207 59 Z"
+        fill="var(--color-accent)"
+        opacity="0.6"
+      />
+    </g>
   );
 }
 

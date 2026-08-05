@@ -154,7 +154,7 @@ export const idContent: ContentData = {
       name: "Glimpse",
       description:
         "Beri ruang untuk merasa dan melepaskan secara anonim tanpa dihakimi melalui jurnal harian.",
-      stack: ["Flutter", "BloC", "AI Integration"],
+      stack: ["Flutter", "BloC", "Social Media", "Reactive"],
       year: "2024",
       links: {},
       illustration: "glimpse",

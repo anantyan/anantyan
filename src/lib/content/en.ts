@@ -157,7 +157,7 @@ export const enContent: ContentData = {
       name: "Glimpse",
       description:
         "Give yourself space to feel and let go anonymously without judgment through a daily journal.",
-      stack: ["Flutter", "BloC", "AI Integration"],
+      stack: ["Flutter", "BloC", "Social Media", "Reactive"],
       year: "2024",
       links: {},
       illustration: "glimpse",
