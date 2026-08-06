@@ -45,7 +45,7 @@ export function Education() {
                     href={`${assetBasePath}${cert.url}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="group inline-flex items-start gap-1.5 transition-colors hover:text-accent"
+                    className="group inline-flex items-start gap-1.5 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                   >
                     <span>{cert.label}</span>
                     <ArrowUpRight

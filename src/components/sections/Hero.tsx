@@ -18,7 +18,7 @@ export function Hero() {
         <p className="text-sm font-medium uppercase tracking-widest text-muted">
           {profile.location}
         </p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tighter text-foreground sm:text-6xl">
+        <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tighter text-foreground sm:text-6xl">
           {profile.name}
         </h1>
         <p className="mt-3 text-xl font-medium text-accent sm:text-2xl">

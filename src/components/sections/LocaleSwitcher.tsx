@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { CaretDown } from "@phosphor-icons/react/ssr";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { LANGUAGE_NAMES, type Locale } from "@/lib/i18n/ui";
@@ -66,6 +67,7 @@ export function LocaleSwitcher() {
   }, []);
 
   const options = Object.keys(LANGUAGE_NAMES) as Locale[];
+  const CurrentFlag = FLAGS[locale];
 
   return (
     <div ref={rootRef} className="relative">
@@ -74,39 +76,46 @@ export function LocaleSwitcher() {
         aria-haspopup="menu"
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}
-        className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-2 text-sm text-foreground transition-colors hover:bg-surface"
+        className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-2 text-sm text-foreground transition-colors hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       >
-        {LANGUAGE_NAMES[locale]}
-        <CaretDown size={14} />
+        <CurrentFlag />
+        <span>{LANGUAGE_NAMES[locale]}</span>
+        <CaretDown size={14} className={`transition-transform duration-150 ${open ? "rotate-180" : ""}`} />
       </button>
-      {open && (
-        <div
-          role="menu"
-          className="absolute right-0 top-full z-10 mt-2 w-24 overflow-hidden rounded-2xl border border-border bg-background shadow-lg"
-        >
-          {options.map((key) => {
-            const Flag = FLAGS[key];
-            return (
-              <button
-                key={key}
-                type="button"
-                role="menuitemradio"
-                aria-checked={locale === key}
-                onClick={() => {
-                  setLocale(key);
-                  setOpen(false);
-                }}
-                className={`flex w-full items-center gap-2 px-3 py-2 text-left text-sm transition-colors hover:bg-surface ${
-                  locale === key ? "font-medium text-accent" : "text-foreground"
-                }`}
-              >
-                <Flag />
-                {LANGUAGE_NAMES[key]}
-              </button>
-            );
-          })}
-        </div>
-      )}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -4, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -4, scale: 0.96 }}
+            transition={{ duration: 0.15 }}
+            role="menu"
+            className="absolute right-0 top-full z-20 mt-2 w-28 overflow-hidden rounded-2xl border border-border bg-background shadow-lg"
+          >
+            {options.map((key) => {
+              const Flag = FLAGS[key];
+              return (
+                <button
+                  key={key}
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked={locale === key}
+                  onClick={() => {
+                    setLocale(key);
+                    setOpen(false);
+                  }}
+                  className={`flex w-full items-center gap-2 px-3.5 py-2.5 text-left text-sm transition-colors hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
+                    locale === key ? "font-semibold text-accent" : "text-foreground"
+                  }`}
+                >
+                  <Flag />
+                  {LANGUAGE_NAMES[key]}
+                </button>
+              );
+            })}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

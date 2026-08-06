@@ -22,7 +22,7 @@ function ExperienceDuration({
     item.durationKey,
     locale
   );
-  return <p className="text-xs text-muted/70">{duration}</p>;
+  return <p className="text-xs font-medium text-muted">{duration}</p>;
 }
 
 export function Experience() {
@@ -66,7 +66,7 @@ export function Experience() {
                       href={`${assetBasePath}${item.certificateUrl}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
+                      className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium text-foreground transition-all hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                     >
                       <FilePdf size={14} />
                       {t.viewCertificate}

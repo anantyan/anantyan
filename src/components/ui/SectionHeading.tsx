@@ -10,7 +10,7 @@ export function SectionHeading({ eyebrow, title, description }: Props) {
       <p className="text-sm font-medium uppercase tracking-widest text-accent">
         {eyebrow}
       </p>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+      <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
         {title}
       </h2>
       {description && (

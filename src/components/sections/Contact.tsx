@@ -19,7 +19,7 @@ export function Contact() {
           <p className="text-sm font-medium uppercase tracking-widest text-accent">
             {t.eyebrow}
           </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             {t.title}
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">{t.body}</p>
@@ -35,7 +35,7 @@ export function Contact() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
-              className="transition-colors hover:text-accent"
+              className="rounded-full p-2 transition-all hover:scale-110 hover:text-accent active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >
               <LinkedinLogo size={22} />
             </a>
@@ -44,7 +44,7 @@ export function Contact() {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
-              className="transition-colors hover:text-accent"
+              className="rounded-full p-2 transition-all hover:scale-110 hover:text-accent active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >
               <GithubLogo size={22} />
             </a>
