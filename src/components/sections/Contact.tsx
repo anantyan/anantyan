@@ -1,5 +1,6 @@
 "use client";
 
+import { motion, useReducedMotion } from "framer-motion";
 import { EnvelopeSimple, GithubLogo, LinkedinLogo } from "@phosphor-icons/react/ssr";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { Button } from "@/components/ui/Button";
@@ -10,7 +11,14 @@ import { ui } from "@/lib/i18n/ui";
 export function Contact() {
   const { locale } = useLocale();
   const { profile } = content[locale];
+  const shouldReduceMotion = useReducedMotion();
   const t = ui[locale].contact;
+
+  const socialMotionProps = {
+    whileHover: shouldReduceMotion ? undefined : { y: -3, scale: 1.12 },
+    whileTap: shouldReduceMotion ? undefined : { y: 2, scale: 0.94 },
+    transition: { type: "spring" as const, stiffness: 400, damping: 17 },
+  };
 
   return (
     <section id="kontak" className="border-t border-border px-6 py-20 sm:py-28">
@@ -29,25 +37,27 @@ export function Contact() {
               {t.contactMe}
             </Button>
           </div>
-          <div className="mt-8 flex items-center justify-center gap-6 text-muted">
-            <a
+          <div className="mt-8 flex items-center justify-center gap-4 text-muted">
+            <motion.a
               href={profile.links.linkedin}
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
-              className="rounded-full p-2 transition-all hover:scale-110 hover:text-accent active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="inline-flex items-center justify-center rounded-full border border-border bg-surface/60 p-3 text-foreground shadow-xs transition-colors hover:border-accent hover:text-accent hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              {...socialMotionProps}
             >
               <LinkedinLogo size={22} />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href={profile.links.github}
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
-              className="rounded-full p-2 transition-all hover:scale-110 hover:text-accent active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="inline-flex items-center justify-center rounded-full border border-border bg-surface/60 p-3 text-foreground shadow-xs transition-colors hover:border-accent hover:text-accent hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              {...socialMotionProps}
             >
               <GithubLogo size={22} />
-            </a>
+            </motion.a>
           </div>
         </RevealSection>
       </div>

@@ -1,13 +1,20 @@
 "use client";
 
-import { memo } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { memo, useEffect } from "react";
+import {
+  motion,
+  useMotionValue,
+  useReducedMotion,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 
 type Shape = "dot" | "ring" | "line" | "triangle";
 
 type Ornament = {
   x: number;
   y: number;
+  z: number;
   size: number;
   duration: number;
   delay: number;
@@ -35,7 +42,7 @@ function sizeForShape(shape: Shape, i: number): number {
 
 // Deterministic R2 low-discrepancy sequence (not Math.random()) so the
 // server-rendered static HTML and the client hydration produce identical
-// markup — avoids a hydration mismatch while still looking scattered.
+// markup — avoids a hydration mismatch while still looking scattered in 3D space.
 function generateOrnaments(count: number): Ornament[] {
   const a1 = 0.7548776662;
   const a2 = 0.5698402910;
@@ -46,6 +53,7 @@ function generateOrnaments(count: number): Ornament[] {
     ornaments.push({
       x: ((0.5 + a1 * i) % 1) * 100,
       y: ((0.5 + a2 * i) % 1) * 100,
+      z: ((i * 23) % 120) - 60,
       size: sizeForShape(shape, i),
       duration: 10 + ((i * 13) % 14),
       delay: (i * 3.3) % 10,
@@ -115,43 +123,69 @@ function OrnamentShape({ ornament }: { ornament: Ornament }) {
 export const StarField = memo(function StarField() {
   const shouldReduceMotion = useReducedMotion();
 
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const smoothX = useSpring(mouseX, { damping: 35, stiffness: 90 });
+  const smoothY = useSpring(mouseY, { damping: 35, stiffness: 90 });
+  const rotateX = useTransform(smoothY, [-0.5, 0.5], [5, -5]);
+  const rotateY = useTransform(smoothX, [-0.5, 0.5], [-5, 5]);
+
+  useEffect(() => {
+    if (shouldReduceMotion) return;
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = e.clientX / window.innerWidth - 0.5;
+      const y = e.clientY / window.innerHeight - 0.5;
+      mouseX.set(x);
+      mouseY.set(y);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [mouseX, mouseY, shouldReduceMotion]);
+
   return (
     <div
-      className="fixed inset-0 -z-10 overflow-hidden bg-background"
+      className="perspective-1200 fixed inset-0 -z-10 overflow-hidden bg-background pointer-events-none"
       aria-hidden="true"
     >
-      {ORNAMENTS.map((ornament, index) => (
-        <motion.div
-          key={index}
-          className={`absolute ${ornament.hideOnMobile ? "hidden sm:block" : ""}`}
-          style={{
-            left: `${ornament.x}%`,
-            top: `${ornament.y}%`,
-            rotate: ornament.rotate,
-          }}
-          animate={
-            shouldReduceMotion
-              ? undefined
-              : {
-                  y: [0, -ornament.drift, 0],
-                  opacity: [0.35, 1, 0.35],
-                  rotate:
-                    ornament.shape === "line" || ornament.shape === "triangle"
-                      ? [ornament.rotate - 20, ornament.rotate + 20, ornament.rotate - 20]
-                      : ornament.rotate,
-                }
-          }
-          transition={{
-            duration: ornament.duration,
-            delay: ornament.delay,
-            repeat: Infinity,
-            repeatType: "mirror",
-            ease: "easeInOut",
-          }}
-        >
-          <OrnamentShape ornament={ornament} />
-        </motion.div>
-      ))}
+      <motion.div
+        className="relative h-full w-full transform-style-3d"
+        style={shouldReduceMotion ? undefined : { rotateX, rotateY }}
+      >
+        {ORNAMENTS.map((ornament, index) => (
+          <motion.div
+            key={index}
+            className={`absolute ${ornament.hideOnMobile ? "hidden sm:block" : ""}`}
+            style={{
+              left: `${ornament.x}%`,
+              top: `${ornament.y}%`,
+              transform: `translateZ(${ornament.z}px)`,
+              rotate: ornament.rotate,
+            }}
+            animate={
+              shouldReduceMotion
+                ? undefined
+                : {
+                    y: [0, -ornament.drift, 0],
+                    opacity: [0.35, 1, 0.35],
+                    rotate:
+                      ornament.shape === "line" || ornament.shape === "triangle"
+                        ? [ornament.rotate - 20, ornament.rotate + 20, ornament.rotate - 20]
+                        : ornament.rotate,
+                  }
+            }
+            transition={{
+              duration: ornament.duration,
+              delay: ornament.delay,
+              repeat: Infinity,
+              repeatType: "mirror",
+              ease: "easeInOut",
+            }}
+          >
+            <OrnamentShape ornament={ornament} />
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 });

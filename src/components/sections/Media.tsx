@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ArrowUpRight, MediumLogo } from "@phosphor-icons/react/ssr";
 import { RevealSection } from "@/components/motion/RevealSection";
+import { TiltCard3D } from "@/components/motion/TiltCard3D";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { content } from "@/lib/content";
@@ -26,8 +27,11 @@ export function Media() {
         </RevealSection>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           <RevealSection delay={0.05}>
-            <div className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-background transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5">
-              <div className="relative h-48 w-full overflow-hidden">
+            <TiltCard3D className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-background shadow-md transition-shadow duration-300 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10">
+              <div
+                className="relative h-48 w-full overflow-hidden transform-style-3d"
+                style={{ transform: "translateZ(16px)" }}
+              >
                 <Image
                   src={`${assetBasePath}${media.coverImage}`}
                   alt={media.eventLabel}
@@ -35,7 +39,10 @@ export function Media() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="flex flex-1 flex-col gap-3 p-6">
+              <div
+                className="flex flex-1 flex-col gap-3 p-6 transform-style-3d"
+                style={{ transform: "translateZ(24px)" }}
+              >
                 <h3 className="text-sm font-semibold text-foreground">
                   {media.eventLabel}
                 </h3>
@@ -63,12 +70,21 @@ export function Media() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </TiltCard3D>
           </RevealSection>
           <RevealSection delay={0.1}>
-            <div className="group flex h-full flex-col justify-between gap-4 rounded-3xl border border-border bg-background p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5">
-              <div>
-                <MediumLogo size={24} className="text-muted transition-colors group-hover:text-accent" />
+            <TiltCard3D
+              href={media.featuredArticle.url}
+              className="group flex h-full flex-col justify-between gap-4 rounded-3xl border border-border bg-background p-6 shadow-md transition-shadow duration-300 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            >
+              <div
+                className="transform-style-3d"
+                style={{ transform: "translateZ(24px)" }}
+              >
+                <MediumLogo
+                  size={26}
+                  className="text-muted transition-colors group-hover:text-accent"
+                />
                 <p className="mt-4 text-xs font-medium uppercase tracking-widest text-accent">
                   {t.featuredHeading}
                 </p>
@@ -79,19 +95,17 @@ export function Media() {
                   {media.featuredArticle.summary}
                 </p>
               </div>
-              <a
-                href={media.featuredArticle.url}
-                target="_blank"
-                rel="noreferrer"
-                className="group/article inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              <div
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground transition-colors group-hover:text-accent transform-style-3d"
+                style={{ transform: "translateZ(28px)" }}
               >
                 {t.readArticle}
                 <ArrowUpRight
                   size={14}
-                  className="flex-none text-muted transition-colors group-hover/article:text-accent"
+                  className="flex-none text-muted transition-colors group-hover:text-accent"
                 />
-              </a>
-            </div>
+              </div>
+            </TiltCard3D>
           </RevealSection>
         </div>
       </div>

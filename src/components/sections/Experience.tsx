@@ -1,5 +1,6 @@
 "use client";
 
+import { motion, useReducedMotion } from "framer-motion";
 import { FilePdf } from "@phosphor-icons/react/ssr";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -28,6 +29,7 @@ function ExperienceDuration({
 export function Experience() {
   const { locale } = useLocale();
   const { experience } = content[locale];
+  const shouldReduceMotion = useReducedMotion();
   const t = ui[locale].experience;
 
   return (
@@ -46,32 +48,37 @@ export function Experience() {
         <div className="mt-10 divide-y divide-border border-t border-border">
           {experience.map((item, index) => (
             <RevealSection key={item.company} delay={Math.min(index * 0.05, 0.3)}>
-              <div className="grid gap-2 py-6 sm:grid-cols-[200px_1fr] sm:gap-8">
-                <div>
-                  <p className="text-sm font-medium text-muted">{item.period}</p>
-                  <ExperienceDuration item={item} locale={locale} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground">
-                    {item.role}
-                  </h3>
-                  <p className="text-sm font-medium text-accent">
-                    {item.company} · {item.location}
-                  </p>
-                  <p className="mt-2 max-w-[65ch] text-sm leading-relaxed text-muted">
-                    {item.description}
-                  </p>
-                  {item.certificateUrl && (
-                    <a
-                      href={`${assetBasePath}${item.certificateUrl}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium text-foreground transition-all hover:border-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                    >
-                      <FilePdf size={14} />
-                      {t.viewCertificate}
-                    </a>
-                  )}
+              <div className="group -mx-4 rounded-2xl p-4 transition-all duration-200 hover:bg-surface/80 hover:shadow-xs">
+                <div className="grid gap-2 sm:grid-cols-[200px_1fr] sm:gap-8">
+                  <div>
+                    <p className="text-sm font-medium text-muted">{item.period}</p>
+                    <ExperienceDuration item={item} locale={locale} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground transition-colors group-hover:text-accent">
+                      {item.role}
+                    </h3>
+                    <p className="text-sm font-medium text-accent/90">
+                      {item.company} · {item.location}
+                    </p>
+                    <p className="mt-2 max-w-[65ch] text-sm leading-relaxed text-muted">
+                      {item.description}
+                    </p>
+                    {item.certificateUrl && (
+                      <motion.a
+                        href={`${assetBasePath}${item.certificateUrl}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground shadow-xs transition-colors hover:border-accent hover:text-accent hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                        whileHover={shouldReduceMotion ? undefined : { y: -1.5, scale: 1.02 }}
+                        whileTap={shouldReduceMotion ? undefined : { y: 1, scale: 0.96 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 18 }}
+                      >
+                        <FilePdf size={14} />
+                        {t.viewCertificate}
+                      </motion.a>
+                    )}
+                  </div>
                 </div>
               </div>
             </RevealSection>

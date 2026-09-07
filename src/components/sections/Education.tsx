@@ -1,5 +1,6 @@
 "use client";
 
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "@phosphor-icons/react/ssr";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -11,6 +12,7 @@ import { assetBasePath } from "@/lib/assetBasePath";
 export function Education() {
   const { locale } = useLocale();
   const { education, certifications, awards } = content[locale];
+  const shouldReduceMotion = useReducedMotion();
   const t = ui[locale];
 
   return (
@@ -23,8 +25,13 @@ export function Education() {
           <SectionHeading eyebrow={t.education.eyebrow} title={t.education.title} />
           <div className="mt-8 space-y-6">
             {education.map((item) => (
-              <div key={item.school}>
-                <h3 className="font-semibold text-foreground">{item.school}</h3>
+              <div
+                key={item.school}
+                className="group -mx-4 rounded-2xl p-4 transition-all duration-200 hover:bg-surface/80 hover:shadow-xs"
+              >
+                <h3 className="font-semibold text-foreground transition-colors group-hover:text-accent">
+                  {item.school}
+                </h3>
                 <p className="text-sm text-accent">{item.degree}</p>
                 <p className="text-sm text-muted">{item.period}</p>
               </div>
@@ -41,18 +48,21 @@ export function Education() {
               <li key={cert.id} className="flex gap-3">
                 <span className="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-accent" />
                 {cert.url ? (
-                  <a
+                  <motion.a
                     href={`${assetBasePath}${cert.url}`}
                     target="_blank"
                     rel="noreferrer"
                     className="group inline-flex items-start gap-1.5 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    whileHover={shouldReduceMotion ? undefined : { x: 3 }}
+                    whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 20 }}
                   >
                     <span>{cert.label}</span>
                     <ArrowUpRight
                       size={14}
                       className="mt-0.5 flex-none text-muted transition-colors group-hover:text-accent"
                     />
-                  </a>
+                  </motion.a>
                 ) : (
                   cert.label
                 )}
