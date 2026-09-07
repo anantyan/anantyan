@@ -1,6 +1,5 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "@phosphor-icons/react/ssr";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -12,7 +11,6 @@ import { assetBasePath } from "@/lib/assetBasePath";
 export function Education() {
   const { locale } = useLocale();
   const { education, certifications, awards } = content[locale];
-  const shouldReduceMotion = useReducedMotion();
   const t = ui[locale];
 
   return (
@@ -48,21 +46,18 @@ export function Education() {
               <li key={cert.id} className="flex gap-3">
                 <span className="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-accent" />
                 {cert.url ? (
-                  <motion.a
+                  <a
                     href={`${assetBasePath}${cert.url}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="group inline-flex items-start gap-1.5 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                    whileHover={shouldReduceMotion ? undefined : { x: 3 }}
-                    whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                    className="group inline-flex items-start gap-1.5 transition-all duration-150 hover:text-accent hover:translate-x-0.5 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                   >
                     <span>{cert.label}</span>
                     <ArrowUpRight
                       size={14}
                       className="mt-0.5 flex-none text-muted transition-colors group-hover:text-accent"
                     />
-                  </motion.a>
+                  </a>
                 ) : (
                   cert.label
                 )}

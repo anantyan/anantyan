@@ -1,6 +1,5 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
 import { FilePdf } from "@phosphor-icons/react/ssr";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -29,7 +28,6 @@ function ExperienceDuration({
 export function Experience() {
   const { locale } = useLocale();
   const { experience } = content[locale];
-  const shouldReduceMotion = useReducedMotion();
   const t = ui[locale].experience;
 
   return (
@@ -65,18 +63,15 @@ export function Experience() {
                       {item.description}
                     </p>
                     {item.certificateUrl && (
-                      <motion.a
+                      <a
                         href={`${assetBasePath}${item.certificateUrl}`}
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground shadow-xs transition-colors hover:border-accent hover:text-accent hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                        whileHover={shouldReduceMotion ? undefined : { y: -1.5, scale: 1.02 }}
-                        whileTap={shouldReduceMotion ? undefined : { y: 1, scale: 0.96 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 18 }}
+                        className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground shadow-xs transition-all duration-150 hover:-translate-y-0.5 hover:border-accent hover:text-accent hover:shadow-sm active:translate-y-0.5 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                       >
                         <FilePdf size={14} />
                         {t.viewCertificate}
-                      </motion.a>
+                      </a>
                     )}
                   </div>
                 </div>

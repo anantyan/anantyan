@@ -17,22 +17,18 @@ type TiltCard3DProps = {
   maxTilt?: number;
   perspective?: number;
   glare?: boolean;
-  href?: string;
   id?: string;
-  onClick?: React.MouseEventHandler<HTMLElement>;
 };
 
-const SPRING_CONFIG = { damping: 22, stiffness: 240, mass: 0.8 };
+const SPRING_CONFIG = { damping: 25, stiffness: 220, mass: 0.8 };
 
 export function TiltCard3D({
   children,
   className = "",
-  maxTilt = 12,
+  maxTilt = 10,
   perspective = 1000,
   glare = true,
-  href,
   id,
-  onClick,
 }: TiltCard3DProps) {
   const shouldReduceMotion = useReducedMotion();
   const cardRef = useRef<HTMLDivElement>(null);
@@ -50,11 +46,11 @@ export function TiltCard3D({
 
   const glareX = useTransform(smoothX, [-0.5, 0.5], [0, 100]);
   const glareY = useTransform(smoothY, [-0.5, 0.5], [0, 100]);
-  const glareOpacity = useTransform(smoothHover, [0, 1], [0, 0.18]);
+  const glareOpacity = useTransform(smoothHover, [0, 1], [0, 0.15]);
 
   const glareBackground = useMotionTemplate`radial-gradient(circle 320px at ${glareX}% ${glareY}%, var(--color-accent), transparent 75%)`;
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (shouldReduceMotion || !cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
@@ -77,91 +73,44 @@ export function TiltCard3D({
   };
 
   if (shouldReduceMotion) {
-    if (href) {
-      return (
-        <a
-          id={id}
-          href={href}
-          target="_blank"
-          rel="noreferrer"
-          className={className}
-          onClick={onClick as React.MouseEventHandler<HTMLAnchorElement>}
-        >
-          {children}
-        </a>
-      );
-    }
     return (
-      <div
-        id={id}
-        className={className}
-        onClick={onClick as React.MouseEventHandler<HTMLDivElement>}
-      >
+      <div id={id} className={className}>
         {children}
       </div>
     );
   }
 
-  const content = (
-    <>
-      <div className="relative h-full w-full transform-style-3d">{children}</div>
+  return (
+    <motion.div
+      id={id}
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        perspective: `${perspective}px`,
+        rotateX,
+        rotateY,
+        transformStyle: "preserve-3d" as const,
+      }}
+      whileHover={{
+        scale: 1.015,
+        transition: { duration: 0.2, ease: "easeOut" as const },
+      }}
+      className={`relative transform-style-3d ${className}`}
+    >
+      <div className="relative h-full w-full transform-style-3d">
+        {children}
+      </div>
       {glare && (
         <motion.div
-          className="pointer-events-none absolute inset-0 z-20 rounded-[inherit] mix-blend-overlay transition-opacity"
+          className="pointer-events-none absolute inset-0 z-30 rounded-[inherit] mix-blend-overlay transition-opacity"
           style={{
             opacity: glareOpacity,
             background: glareBackground,
           }}
         />
       )}
-    </>
-  );
-
-  const motionBaseProps = {
-    id,
-    onMouseMove: handleMouseMove,
-    onMouseEnter: handleMouseEnter,
-    onMouseLeave: handleMouseLeave,
-    style: {
-      perspective: `${perspective}px`,
-      rotateX,
-      rotateY,
-      transformStyle: "preserve-3d" as const,
-    },
-    whileHover: {
-      scale: 1.02,
-      transition: { duration: 0.25, ease: "easeOut" as const },
-    },
-    whileTap: {
-      scale: 0.97,
-      rotateX: 4,
-      transition: { duration: 0.15, ease: "easeOut" as const },
-    },
-    className: `relative transform-style-3d cursor-pointer ${className}`,
-  };
-
-  if (href) {
-    return (
-      <motion.a
-        ref={cardRef as unknown as React.RefObject<HTMLAnchorElement>}
-        href={href}
-        target="_blank"
-        rel="noreferrer"
-        onClick={onClick as React.MouseEventHandler<HTMLAnchorElement>}
-        {...motionBaseProps}
-      >
-        {content}
-      </motion.a>
-    );
-  }
-
-  return (
-    <motion.div
-      ref={cardRef}
-      onClick={onClick as React.MouseEventHandler<HTMLDivElement>}
-      {...motionBaseProps}
-    >
-      {content}
     </motion.div>
   );
 }

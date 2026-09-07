@@ -40,9 +40,6 @@ function sizeForShape(shape: Shape, i: number): number {
   }
 }
 
-// Deterministic R2 low-discrepancy sequence (not Math.random()) so the
-// server-rendered static HTML and the client hydration produce identical
-// markup — avoids a hydration mismatch while still looking scattered in 3D space.
 function generateOrnaments(count: number): Ornament[] {
   const a1 = 0.7548776662;
   const a2 = 0.5698402910;
@@ -53,7 +50,7 @@ function generateOrnaments(count: number): Ornament[] {
     ornaments.push({
       x: ((0.5 + a1 * i) % 1) * 100,
       y: ((0.5 + a2 * i) % 1) * 100,
-      z: ((i * 23) % 120) - 60,
+      z: -(((i * 17) % 80) + 10), // strictly negative depth behind all content
       size: sizeForShape(shape, i),
       duration: 10 + ((i * 13) % 14),
       delay: (i * 3.3) % 10,
@@ -79,7 +76,7 @@ function OrnamentShape({ ornament }: { ornament: Ornament }) {
   if (ornament.shape === "ring") {
     return (
       <span
-        className={`block rounded-full border-[1.5px] ${borderColorClass}`}
+        className={`block rounded-full border-[1.5px] ${borderColorClass} pointer-events-none`}
         style={{ width: ornament.size, height: ornament.size }}
       />
     );
@@ -88,7 +85,7 @@ function OrnamentShape({ ornament }: { ornament: Ornament }) {
   if (ornament.shape === "line") {
     return (
       <span
-        className={`block rounded-full ${colorClass}`}
+        className={`block rounded-full ${colorClass} pointer-events-none`}
         style={{ width: ornament.size, height: 2 }}
       />
     );
@@ -97,7 +94,7 @@ function OrnamentShape({ ornament }: { ornament: Ornament }) {
   if (ornament.shape === "triangle") {
     return (
       <span
-        className="block"
+        className="block pointer-events-none"
         style={{
           width: 0,
           height: 0,
@@ -114,7 +111,7 @@ function OrnamentShape({ ornament }: { ornament: Ornament }) {
 
   return (
     <span
-      className={`block rounded-full ${colorClass}`}
+      className={`block rounded-full ${colorClass} pointer-events-none`}
       style={{ width: ornament.size, height: ornament.size }}
     />
   );
@@ -127,8 +124,8 @@ export const StarField = memo(function StarField() {
   const mouseY = useMotionValue(0);
   const smoothX = useSpring(mouseX, { damping: 35, stiffness: 90 });
   const smoothY = useSpring(mouseY, { damping: 35, stiffness: 90 });
-  const rotateX = useTransform(smoothY, [-0.5, 0.5], [5, -5]);
-  const rotateY = useTransform(smoothX, [-0.5, 0.5], [-5, 5]);
+  const rotateX = useTransform(smoothY, [-0.5, 0.5], [4, -4]);
+  const rotateY = useTransform(smoothX, [-0.5, 0.5], [-4, 4]);
 
   useEffect(() => {
     if (shouldReduceMotion) return;
@@ -145,17 +142,17 @@ export const StarField = memo(function StarField() {
 
   return (
     <div
-      className="perspective-1200 fixed inset-0 -z-10 overflow-hidden bg-background pointer-events-none"
+      className="perspective-1200 fixed inset-0 -z-10 overflow-hidden bg-background pointer-events-none select-none"
       aria-hidden="true"
     >
       <motion.div
-        className="relative h-full w-full transform-style-3d"
+        className="relative h-full w-full transform-style-3d pointer-events-none"
         style={shouldReduceMotion ? undefined : { rotateX, rotateY }}
       >
         {ORNAMENTS.map((ornament, index) => (
           <motion.div
             key={index}
-            className={`absolute ${ornament.hideOnMobile ? "hidden sm:block" : ""}`}
+            className={`pointer-events-none absolute ${ornament.hideOnMobile ? "hidden sm:block" : ""}`}
             style={{
               left: `${ornament.x}%`,
               top: `${ornament.y}%`,

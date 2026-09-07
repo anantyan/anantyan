@@ -30,7 +30,7 @@ export function Media() {
             <TiltCard3D className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-background shadow-md transition-shadow duration-300 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10">
               <div
                 className="relative h-48 w-full overflow-hidden transform-style-3d"
-                style={{ transform: "translateZ(16px)" }}
+                style={{ transform: "translateZ(14px)" }}
               >
                 <Image
                   src={`${assetBasePath}${media.coverImage}`}
@@ -41,19 +41,19 @@ export function Media() {
               </div>
               <div
                 className="flex flex-1 flex-col gap-3 p-6 transform-style-3d"
-                style={{ transform: "translateZ(24px)" }}
+                style={{ transform: "translateZ(20px)" }}
               >
                 <h3 className="text-sm font-semibold text-foreground">
                   {media.eventLabel}
                 </h3>
-                <ul className="space-y-3">
+                <ul className="relative z-20 space-y-3">
                   {media.newsLinks.map((link) => (
                     <li key={link.url}>
                       <a
                         href={link.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="group/link inline-flex items-start gap-1.5 rounded-sm text-sm text-foreground transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                        className="group/link inline-flex items-start gap-1.5 rounded-sm text-sm text-foreground transition-all duration-150 hover:text-accent hover:translate-x-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                       >
                         <span>
                           {link.headline}
@@ -73,13 +73,10 @@ export function Media() {
             </TiltCard3D>
           </RevealSection>
           <RevealSection delay={0.1}>
-            <TiltCard3D
-              href={media.featuredArticle.url}
-              className="group flex h-full flex-col justify-between gap-4 rounded-3xl border border-border bg-background p-6 shadow-md transition-shadow duration-300 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-            >
+            <TiltCard3D className="group flex h-full flex-col justify-between gap-4 rounded-3xl border border-border bg-background p-6 shadow-md transition-shadow duration-300 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10">
               <div
                 className="transform-style-3d"
-                style={{ transform: "translateZ(24px)" }}
+                style={{ transform: "translateZ(18px)" }}
               >
                 <MediumLogo
                   size={26}
@@ -88,22 +85,34 @@ export function Media() {
                 <p className="mt-4 text-xs font-medium uppercase tracking-widest text-accent">
                   {t.featuredHeading}
                 </p>
-                <h3 className="mt-2 text-balance text-lg font-semibold text-foreground">
+                <a
+                  href={media.featuredArticle.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-2 block text-balance text-lg font-semibold text-foreground transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                >
                   {media.featuredArticle.title}
-                </h3>
+                </a>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
                   {media.featuredArticle.summary}
                 </p>
               </div>
               <div
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground transition-colors group-hover:text-accent transform-style-3d"
-                style={{ transform: "translateZ(28px)" }}
+                className="relative z-20 transform-style-3d"
+                style={{ transform: "translateZ(22px)" }}
               >
-                {t.readArticle}
-                <ArrowUpRight
-                  size={14}
-                  className="flex-none text-muted transition-colors group-hover:text-accent"
-                />
+                <a
+                  href={media.featuredArticle.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground transition-all duration-150 hover:text-accent hover:translate-x-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                >
+                  {t.readArticle}
+                  <ArrowUpRight
+                    size={14}
+                    className="flex-none text-muted transition-colors group-hover:text-accent"
+                  />
+                </a>
               </div>
             </TiltCard3D>
           </RevealSection>
