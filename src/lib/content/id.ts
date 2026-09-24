@@ -5,12 +5,12 @@ import ongoingDuration from "./generated/ongoing-duration.json";
 export const idContent: ContentData = {
   profile: {
     name: "Arya Rezza Anantya",
-    role: "Mobile Developer",
+    role: "Platform AI Engineer & Mobile Developer",
     location: "Purwokerto, Jawa Tengah, Indonesia",
     tagline:
-      "Membangun aplikasi mobile yang rapi, teruji, dan siap tumbuh — dari Kotlin native hingga Flutter multiplatform.",
+      "Menghubungkan sistem multiplatform sisi klien dengan arsitektur platform terukur — dari Flutter berkinerja tinggi & Kotlin native hingga ekosistem digital bertenaga AI.",
     summary:
-      "Lulusan S1 Ilmu Komputer Universitas Amikom Purwokerto dengan pelatihan intensif di SYNRGY dan Binar Academy. Fokus pada pengembangan mobile menggunakan Kotlin, Android Jetpack, Swift, dan Dart/Flutter — termasuk penerapan arsitektur BloC, Clean Architecture, integrasi Firebase Cloud, dan REST API. Terbiasa berkolaborasi lintas peran dalam tim untuk merancang antarmuka yang mengikuti prinsip UI design modern.",
+      "Lulusan S1 Ilmu Komputer Universitas Amikom Purwokerto dengan pelatihan intensif di SYNRGY dan Binar Academy. Saat ini berkiprah sebagai Platform AI Engineer & Mobile Developer, menghubungkan pengembangan multiplatform kelas produksi (Flutter, native Kotlin, Swift) dengan arsitektur backend yang terukur, orkestrasi RESTful API, dan aliran data stateful yang tangguh. Berpengalaman menghadirkan solusi digital menyeluruh, membangun produk berbasis AI, serta menerapkan Clean Architecture dan standar rekayasa perangkat lunak modern lintas web dan mobile.",
     email: "aryarezza@hotmail.com",
     links: {
       linkedin: "https://www.linkedin.com/in/anantyan",
@@ -22,35 +22,75 @@ export const idContent: ContentData = {
     ],
   },
   skills: [
+    "Platform AI",
     "Kotlin",
-    "Java",
     "Dart & Flutter",
     "Swift",
+    "Java",
+    "System Architecture",
     "Android Jetpack",
     "Jetpack Compose",
     "BloC",
     "MVVM",
     "Clean Architecture",
+    "RESTful API Orchestration",
+    "Stateful Data Flow",
     "Firebase",
     "Supabase",
-    "REST API",
-    "Material Design 3",
     "Unit Testing",
     "CI/CD",
   ],
   experience: [
     {
       company: "PT. Nera Teknologi Utama",
-      role: "Mobile Developer",
+      employmentType: "Penuh Waktu",
+      workplaceType: "Jarak Jauh (Remote)",
+      location: "Jakarta Selatan",
       period: "November 2024 — Sekarang",
       duration: formatOngoingDuration(
         ongoingDuration["nera-teknologi-utama"],
         "id"
       ),
       durationKey: "nera-teknologi-utama",
-      location: "Jakarta Selatan",
-      description:
-        "Mengembangkan Mimo Candidate — aplikasi mobile pencari kerja berbasis AI (Android & iOS) — dengan Flutter framework, termasuk beberapa implementasi kode native untuk kebutuhan performa dan integrasi platform-spesifik.",
+      positions: [
+        {
+          role: "Platform AI Engineer",
+          period: "September 2026 — Sekarang",
+          duration: formatOngoingDuration(
+            ongoingDuration["nera-platform-ai"],
+            "id"
+          ),
+          durationKey: "nera-platform-ai",
+          location: "Jakarta Selatan",
+          isCurrent: true,
+          description:
+            "Menghadirkan solusi digital menyeluruh dengan menghubungkan pengembangan multiplatform sisi klien dan arsitektur backend yang terukur. Memimpin pengembangan aplikasi mobile kelas produksi menggunakan Flutter dan Android native (Kotlin), sekaligus memperluas cakupan sistem inti mencakup frontend web responsif serta layanan backend yang andal. Merancang integrasi RESTful API, mengorkestrasi aliran data stateful lintas platform, dan membangun logika sisi server yang tangguh guna memastikan pengiriman data yang mulus, performa optimal, serta kualitas kode tinggi di lingkungan mobile dan web.",
+          skills: [
+            "Platform AI",
+            "Flutter",
+            "Kotlin",
+            "System Architecture",
+            "RESTful API",
+            "Stateful Data Flow",
+          ],
+        },
+        {
+          role: "Mobile Developer",
+          period: "November 2024 — September 2026",
+          duration: "1 thn 11 bln",
+          location: "Jakarta Selatan, Indonesia",
+          isCurrent: false,
+          description:
+            "Merancang dan memelihara aplikasi mobile lintas platform menggunakan Flutter dan Dart, mengintegrasikan native platform channel (Kotlin) untuk kapabilitas perangkat tingkat rendah dan modul performa kritis. Mengembangkan Mimo Candidate — aplikasi mobile pencari kerja bertenaga AI di Android dan iOS — dengan optimasi manajemen state dan cache data offline-first.",
+          skills: [
+            "Mobile Application Development",
+            "Flutter & Dart",
+            "Kotlin Native Channels",
+            "BloC Architecture",
+            "Clean Architecture",
+          ],
+        },
+      ],
     },
     {
       company: "PT. Omnifit Solusi Nusantara",

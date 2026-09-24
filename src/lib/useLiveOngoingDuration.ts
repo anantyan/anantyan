@@ -38,5 +38,5 @@ export function useLiveOngoingDuration(
     setDuration(formatOngoingDuration(monthsElapsed, locale));
   }, [durationKey, locale]);
 
-  return duration;
+  return durationKey ? duration : initialDuration;
 }

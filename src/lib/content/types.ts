@@ -14,9 +14,24 @@ export type Profile = {
   languages: { name: string; level: string }[];
 };
 
+export type ExperiencePosition = {
+  role: string;
+  period: string;
+  duration: string;
+  /**
+   * Key into ongoing-start-dates.json — set only on still-ongoing
+   * entries so duration can be recomputed live in the browser.
+   */
+  durationKey?: string;
+  location: string;
+  description: string;
+  certificateUrl?: string;
+  skills?: string[];
+  isCurrent?: boolean;
+};
+
 export type ExperienceItem = {
   company: string;
-  role: string;
   period: string;
   duration: string;
   /**
@@ -26,8 +41,13 @@ export type ExperienceItem = {
    */
   durationKey?: string;
   location: string;
-  description: string;
+  employmentType?: string;
+  workplaceType?: string;
+  role?: string;
+  description?: string;
   certificateUrl?: string;
+  skills?: string[];
+  positions?: ExperiencePosition[];
 };
 
 export type EducationItem = {
