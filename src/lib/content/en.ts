@@ -55,7 +55,7 @@ export const enContent: ContentData = {
       positions: [
         {
           role: "Platform AI Engineer",
-          period: "September 2026 — Present",
+          period: "January 2026 — Present",
           duration: formatOngoingDuration(
             ongoingDuration["nera-platform-ai"],
             "en"
@@ -76,8 +76,8 @@ export const enContent: ContentData = {
         },
         {
           role: "Mobile Developer",
-          period: "November 2024 — September 2026",
-          duration: "1 yr 11 mo",
+          period: "November 2024 — January 2026",
+          duration: "1 yr 3 mo",
           location: "South Jakarta, Jakarta, Indonesia",
           isCurrent: false,
           description:

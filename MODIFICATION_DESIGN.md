@@ -19,8 +19,8 @@ Based on the provided LinkedIn career history snapshot (`2026-09-24_22-47-37.png
 3. **LinkedIn-Style Grouped Multi-Role Experience Component**:
    - Transform the Work Experience section to elegantly support multi-position progression within the same company.
    - For **PT. Nera Teknologi Utama**, display an overarching company tenure with a vertical connecting timeline rail containing:
-     - **Platform AI Engineer** (September 2026 — Present / Sekarang · Live duration).
-     - **Mobile Developer** (November 2024 — September 2026 · 1 yr 11 mos / 1 thn 11 bln).
+     - **Platform AI Engineer** (January 2026 — Present / Januari 2026 — Sekarang · Live duration).
+     - **Mobile Developer** (November 2024 — January 2026 · 1 yr 3 mos / 1 thn 3 bln).
    - Retain full compatibility for single-position career items (Omnifit, SYNRGY Academy, Bank Mandiri, Citiasia, Binar Academy).
 
 ---

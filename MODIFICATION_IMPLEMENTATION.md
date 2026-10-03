@@ -43,8 +43,8 @@
   - Enhance `profile.tagline` and `profile.summary` in both locales to articulate the bridge between multiplatform mobile (Flutter, Kotlin, Swift) and scalable backend/AI platform architectures.
   - Expand `skills` list to incorporate platform, architectural, and AI engineering competencies (`Platform AI`, `System Architecture`, `RESTful API Orchestration`, `Stateful Data Flow`, `Cross-Platform`).
   - Restructure `PT. Nera Teknologi Utama` under `experience` to contain two positions:
-    1. **Platform AI Engineer** (September 2026 — Present / Sekarang · ongoing duration).
-    2. **Mobile Developer** (November 2024 — September 2026 · 1 yr 11 mos / 1 thn 11 bln).
+    1. **Platform AI Engineer** (January 2026 — Present / Januari 2026 — Sekarang · ongoing duration).
+    2. **Mobile Developer** (November 2024 — January 2026 · 1 yr 3 mos / 1 thn 3 bln).
 - [x] Verify types with `npx tsc --noEmit`.
 
 ---
