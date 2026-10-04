@@ -68,6 +68,7 @@ export type Certification = {
 };
 
 export type ProjectIllustrationKey =
+  | "weplan"
   | "wingson"
   | "secondhand"
   | "news"
@@ -78,6 +79,7 @@ export type ProjectLinks = {
   repo?: string;
   playStore?: string;
   appStore?: string;
+  url?: string;
 };
 
 export type Project = {

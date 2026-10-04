@@ -180,6 +180,27 @@ export const idContent: ContentData = {
   awards: ["Lomba Karya Cipta Nasional Bangka Tengah", "LKS Web Design"],
   projects: [
     {
+      slug: "weplan-ops",
+      name: "WePlan Ops",
+      description:
+        "Platform operasional dan portal klien terpadu untuk studio wedding organizer dan vendor pernikahan dengan manajemen jadwal, checklist, dan kolaborasi multi-vendor.",
+      stack: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "MS Azure",
+        "Appwrite",
+        "PostgreSQL",
+        "Firebase",
+      ],
+      year: "2026",
+      links: {
+        url: "https://weplan-ops.app",
+      },
+      illustration: "weplan",
+    },
+    {
       slug: "mimo-candidate",
       name: "Mimo Candidate",
       description:

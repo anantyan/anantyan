@@ -183,6 +183,27 @@ export const enContent: ContentData = {
   ],
   projects: [
     {
+      slug: "weplan-ops",
+      name: "WePlan Ops",
+      description:
+        "An operational platform and client portal for wedding organizer studios and vendors featuring timeline management, task checklists, and multi-vendor collaboration.",
+      stack: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "MS Azure",
+        "Appwrite",
+        "PostgreSQL",
+        "Firebase",
+      ],
+      year: "2026",
+      links: {
+        url: "https://weplan-ops.app",
+      },
+      illustration: "weplan",
+    },
+    {
       slug: "mimo-candidate",
       name: "Mimo Candidate",
       description:

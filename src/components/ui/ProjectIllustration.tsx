@@ -18,12 +18,74 @@ export function ProjectIllustration({ variant, className }: Props) {
       aria-hidden="true"
     >
       <rect width="320" height="240" fill="var(--color-surface)" />
+      {variant === "weplan" && <WePlanArt />}
       {variant === "wingson" && <WingsOnArt />}
       {variant === "secondhand" && <SecondHandArt />}
       {variant === "news" && <NewsArt />}
       {variant === "recipe" && <RecipeArt />}
       {variant === "candidate" && <CandidateArt />}
     </svg>
+  );
+}
+
+function WePlanArt() {
+  return (
+    <g>
+      <rect
+        x="90"
+        y="55"
+        width="140"
+        height="130"
+        rx="10"
+        fill="var(--color-border)"
+        opacity="0.3"
+      />
+      <rect
+        x="80"
+        y="45"
+        width="140"
+        height="135"
+        rx="10"
+        fill="var(--color-background)"
+        stroke="var(--color-accent)"
+        strokeWidth="3"
+      />
+      <rect
+        x="125"
+        y="38"
+        width="50"
+        height="14"
+        rx="4"
+        fill="var(--color-surface)"
+        stroke="var(--color-accent)"
+        strokeWidth="2.5"
+      />
+      <circle cx="150" cy="45" r="2.5" fill="var(--color-accent)" />
+      
+      <circle cx="102" cy="74" r="5" fill="var(--color-accent)" opacity="0.2" stroke="var(--color-accent)" strokeWidth="1.5" />
+      <path d="M100 74 l2 2 l4 -4" fill="none" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <rect x="115" y="71" width="75" height="6" rx="3" fill="var(--color-accent)" opacity="0.8" />
+
+      <circle cx="102" cy="94" r="5" fill="var(--color-accent)" opacity="0.2" stroke="var(--color-accent)" strokeWidth="1.5" />
+      <path d="M100 94 l2 2 l4 -4" fill="none" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <rect x="115" y="91" width="55" height="6" rx="3" fill="var(--color-accent)" opacity="0.5" />
+
+      <circle cx="102" cy="114" r="5" fill="none" stroke="var(--color-accent)" strokeWidth="1.5" opacity="0.6" />
+      <rect x="115" y="111" width="85" height="6" rx="3" fill="var(--color-border)" />
+
+      <circle cx="102" cy="134" r="5" fill="none" stroke="var(--color-accent)" strokeWidth="1.5" opacity="0.6" />
+      <rect x="115" y="131" width="45" height="6" rx="3" fill="var(--color-border)" />
+
+      <circle cx="218" cy="162" r="16" fill="var(--color-background)" stroke="var(--color-accent)" strokeWidth="2.5" opacity="0.9" />
+      <circle cx="232" cy="162" r="16" fill="none" stroke="var(--color-accent)" strokeWidth="2.5" opacity="0.8" />
+      <path d="M225 152 l2 3 l3 -1" stroke="var(--color-accent)" strokeWidth="1.5" strokeLinecap="round" />
+
+      <path
+        d="M60 70 L62 76 L68 78 L62 80 L60 86 L58 80 L52 78 L58 76 Z"
+        fill="var(--color-accent)"
+        opacity="0.5"
+      />
+    </g>
   );
 }
 
