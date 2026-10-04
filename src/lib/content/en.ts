@@ -1,16 +1,14 @@
 import type { ContentData } from "./types";
-import { formatOngoingDuration } from "@/lib/formatDuration";
-import ongoingDuration from "./generated/ongoing-duration.json";
 
 export const enContent: ContentData = {
   profile: {
     name: "Arya Rezza Anantya",
-    role: "Platform AI Engineer & Mobile Developer",
+    role: "Fullstack Developer & Mobile Developer",
     location: "Purwokerto, Central Java, Indonesia",
     tagline:
       "Bridging client-side multiplatform systems with scalable platform architectures — from high-performance Flutter & native Kotlin to AI-driven digital ecosystems.",
     summary:
-      "A Computer Science graduate from Universitas Amikom Purwokerto with intensive training at SYNRGY and Binar Academy. Currently operating as a Platform AI Engineer & Mobile Developer, bridging production-grade multiplatform development (Flutter, native Kotlin, Swift) with scalable backend architectures, RESTful API orchestration, and resilient stateful data flows. Proven experience delivering end-to-end digital solutions, building AI-powered products, and applying Clean Architecture and rigorous engineering standards across web and mobile platforms.",
+      "A Computer Science graduate from Universitas Amikom Purwokerto with intensive training at SYNRGY and Binar Academy. Currently operating as a Fullstack Developer & Mobile Developer, bridging production-grade multiplatform development (Flutter, native Kotlin, Swift) with scalable backend architectures, RESTful API orchestration, and resilient stateful data flows. Proven experience delivering end-to-end digital solutions, building modern web and mobile products, and applying Clean Architecture and rigorous engineering standards across web and mobile platforms.",
     email: "aryarezza@hotmail.com",
     links: {
       linkedin: "https://www.linkedin.com/in/anantyan",
@@ -22,7 +20,7 @@ export const enContent: ContentData = {
     ],
   },
   skills: [
-    "Platform AI",
+    "Fullstack Development",
     "Kotlin",
     "Dart & Flutter",
     "Swift",
@@ -46,27 +44,19 @@ export const enContent: ContentData = {
       employmentType: "Full-time",
       workplaceType: "Remote",
       location: "South Jakarta",
-      period: "November 2024 — Present",
-      duration: formatOngoingDuration(
-        ongoingDuration["nera-teknologi-utama"],
-        "en"
-      ),
-      durationKey: "nera-teknologi-utama",
+      period: "November 2024 — October 2026",
+      duration: "2 yrs",
       positions: [
         {
-          role: "Platform AI Engineer",
-          period: "January 2026 — Present",
-          duration: formatOngoingDuration(
-            ongoingDuration["nera-platform-ai"],
-            "en"
-          ),
-          durationKey: "nera-platform-ai",
+          role: "Fullstack Developer",
+          period: "January 2026 — October 2026",
+          duration: "10 mo",
           location: "Jakarta Selatan",
-          isCurrent: true,
+          isCurrent: false,
           description:
             "Delivered end-to-end digital solutions by bridging client-side multiplatform development with scalable backend architectures. Spearheaded the development of production-grade mobile applications using Flutter and native Android (Kotlin), while expanding the core system scope to include responsive web frontends and reliable backend services. Designed RESTful API integrations, orchestrated stateful data flow across platforms, and built resilient server-side logic to ensure seamless data delivery, optimal performance, and high code quality across mobile and web environments.",
           skills: [
-            "Platform AI",
+            "Fullstack Development",
             "Flutter",
             "Kotlin",
             "System Architecture",
@@ -192,16 +182,6 @@ export const enContent: ContentData = {
     "LKS Web Design Competition",
   ],
   projects: [
-    {
-      slug: "glimpse",
-      name: "Glimpse",
-      description:
-        "Give yourself space to feel and let go anonymously without judgment through a daily journal.",
-      stack: ["Flutter", "BloC", "Social Media", "Reactive"],
-      year: "2024",
-      links: {},
-      illustration: "glimpse",
-    },
     {
       slug: "mimo-candidate",
       name: "Mimo Candidate",

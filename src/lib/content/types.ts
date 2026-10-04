@@ -72,8 +72,7 @@ export type ProjectIllustrationKey =
   | "secondhand"
   | "news"
   | "recipe"
-  | "candidate"
-  | "glimpse";
+  | "candidate";
 
 export type ProjectLinks = {
   repo?: string;

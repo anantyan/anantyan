@@ -1,16 +1,14 @@
 import type { ContentData } from "./types";
-import { formatOngoingDuration } from "@/lib/formatDuration";
-import ongoingDuration from "./generated/ongoing-duration.json";
 
 export const idContent: ContentData = {
   profile: {
     name: "Arya Rezza Anantya",
-    role: "Platform AI Engineer & Mobile Developer",
+    role: "Fullstack Developer & Mobile Developer",
     location: "Purwokerto, Jawa Tengah, Indonesia",
     tagline:
       "Menghubungkan sistem multiplatform sisi klien dengan arsitektur platform terukur — dari Flutter berkinerja tinggi & Kotlin native hingga ekosistem digital bertenaga AI.",
     summary:
-      "Lulusan S1 Ilmu Komputer Universitas Amikom Purwokerto dengan pelatihan intensif di SYNRGY dan Binar Academy. Saat ini berkiprah sebagai Platform AI Engineer & Mobile Developer, menghubungkan pengembangan multiplatform kelas produksi (Flutter, native Kotlin, Swift) dengan arsitektur backend yang terukur, orkestrasi RESTful API, dan aliran data stateful yang tangguh. Berpengalaman menghadirkan solusi digital menyeluruh, membangun produk berbasis AI, serta menerapkan Clean Architecture dan standar rekayasa perangkat lunak modern lintas web dan mobile.",
+      "Lulusan S1 Ilmu Komputer Universitas Amikom Purwokerto dengan pelatihan intensif di SYNRGY dan Binar Academy. Saat ini berkiprah sebagai Fullstack Developer & Mobile Developer, menghubungkan pengembangan multiplatform kelas produksi (Flutter, native Kotlin, Swift) dengan arsitektur backend yang terukur, orkestrasi RESTful API, dan aliran data stateful yang tangguh. Berpengalaman menghadirkan solusi digital menyeluruh, membangun produk web dan mobile modern, serta menerapkan Clean Architecture dan standar rekayasa perangkat lunak modern lintas web dan mobile.",
     email: "aryarezza@hotmail.com",
     links: {
       linkedin: "https://www.linkedin.com/in/anantyan",
@@ -22,7 +20,7 @@ export const idContent: ContentData = {
     ],
   },
   skills: [
-    "Platform AI",
+    "Fullstack Development",
     "Kotlin",
     "Dart & Flutter",
     "Swift",
@@ -46,27 +44,19 @@ export const idContent: ContentData = {
       employmentType: "Penuh Waktu",
       workplaceType: "Jarak Jauh (Remote)",
       location: "Jakarta Selatan",
-      period: "November 2024 — Sekarang",
-      duration: formatOngoingDuration(
-        ongoingDuration["nera-teknologi-utama"],
-        "id"
-      ),
-      durationKey: "nera-teknologi-utama",
+      period: "November 2024 — Oktober 2026",
+      duration: "2 thn",
       positions: [
         {
-          role: "Platform AI Engineer",
-          period: "Januari 2026 — Sekarang",
-          duration: formatOngoingDuration(
-            ongoingDuration["nera-platform-ai"],
-            "id"
-          ),
-          durationKey: "nera-platform-ai",
+          role: "Fullstack Developer",
+          period: "Januari 2026 — Oktober 2026",
+          duration: "10 bln",
           location: "Jakarta Selatan",
-          isCurrent: true,
+          isCurrent: false,
           description:
             "Menghadirkan solusi digital menyeluruh dengan menghubungkan pengembangan multiplatform sisi klien dan arsitektur backend yang terukur. Memimpin pengembangan aplikasi mobile kelas produksi menggunakan Flutter dan Android native (Kotlin), sekaligus memperluas cakupan sistem inti mencakup frontend web responsif serta layanan backend yang andal. Merancang integrasi RESTful API, mengorkestrasi aliran data stateful lintas platform, dan membangun logika sisi server yang tangguh guna memastikan pengiriman data yang mulus, performa optimal, serta kualitas kode tinggi di lingkungan mobile dan web.",
           skills: [
-            "Platform AI",
+            "Fullstack Development",
             "Flutter",
             "Kotlin",
             "System Architecture",
@@ -189,16 +179,6 @@ export const idContent: ContentData = {
   ],
   awards: ["Lomba Karya Cipta Nasional Bangka Tengah", "LKS Web Design"],
   projects: [
-    {
-      slug: "glimpse",
-      name: "Glimpse",
-      description:
-        "Beri ruang untuk merasa dan melepaskan secara anonim tanpa dihakimi melalui jurnal harian.",
-      stack: ["Flutter", "BloC", "Social Media", "Reactive"],
-      year: "2024",
-      links: {},
-      illustration: "glimpse",
-    },
     {
       slug: "mimo-candidate",
       name: "Mimo Candidate",
